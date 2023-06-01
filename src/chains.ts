@@ -1,6 +1,12 @@
 import { ChainUnknownError } from './errors'
 import { ChainInformation, ChainType, Currency } from './types'
 
+const NOVA: Currency = {
+  name: 'NOVA',
+  symbol: 'NOVA',
+  decimals: 18,
+}
+
 const ETH: Currency = {
   name: 'Ether',
   symbol: 'ETH',
@@ -88,6 +94,18 @@ const EVMOS: Currency = {
 }
 
 const CHAIN_INFORMATION = new Map<number, ChainInformation | ChainType>([
+  [
+    350,
+    {
+      id: 350,
+      nativeCurrency: NOVA,
+      type: 'main',
+      fullName: 'NOVA Mainnet Network',
+      shortName: 'NOVA',
+      explorerUrl: `https://explorer.novatoken.fr`,
+      testnet: false,
+    },
+  ],
   [
     1,
     {
