@@ -1,2 +1,2852 @@
-"use strict";function e(e){if(e&&e.__esModule)return e;var t={};return e&&Object.keys(e).forEach((function(r){var n=Object.getOwnPropertyDescriptor(e,r);Object.defineProperty(t,r,n.get?n:{enumerable:!0,get:function(){return e[r]}})})),t.default=e,t}var t,r=require("prop-types"),n=require("react"),o=require("@web3-react/core"),a=(t=require("jsbi"))&&"object"==typeof t&&"default"in t?t.default:t;function i(){i=function(){return e};var e={},t=Object.prototype,r=t.hasOwnProperty,n=Object.defineProperty||function(e,t,r){e[t]=r.value},o="function"==typeof Symbol?Symbol:{},a=o.iterator||"@@iterator",u=o.asyncIterator||"@@asyncIterator",c=o.toStringTag||"@@toStringTag";function s(e,t,r){return Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}),e[t]}try{s({},"")}catch(e){s=function(e,t,r){return e[t]=r}}function l(e,t,r,o){var a=Object.create((t&&t.prototype instanceof h?t:h).prototype),i=new T(o||[]);return n(a,"_invoke",{value:C(e,r,i)}),a}function p(e,t,r){try{return{type:"normal",arg:e.call(t,r)}}catch(e){return{type:"throw",arg:e}}}e.wrap=l;var f={};function h(){}function m(){}function d(){}var v={};s(v,a,(function(){return this}));var y=Object.getPrototypeOf,b=y&&y(y(L([])));b&&b!==t&&r.call(b,a)&&(v=b);var w=d.prototype=h.prototype=Object.create(v);function g(e){["next","throw","return"].forEach((function(t){s(e,t,(function(e){return this._invoke(t,e)}))}))}function x(e,t){var o;n(this,"_invoke",{value:function(n,a){function i(){return new t((function(o,i){!function n(o,a,i,u){var c=p(e[o],e,a);if("throw"!==c.type){var s=c.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?t.resolve(l.__await).then((function(e){n("next",e,i,u)}),(function(e){n("throw",e,i,u)})):t.resolve(l).then((function(e){s.value=e,i(s)}),(function(e){return n("throw",e,i,u)}))}u(c.arg)}(n,a,o,i)}))}return o=o?o.then(i,i):i()}})}function C(e,t,r){var n="suspendedStart";return function(o,a){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw a;return{value:void 0,done:!0}}for(r.method=o,r.arg=a;;){var i=r.delegate;if(i){var u=E(i,r);if(u){if(u===f)continue;return u}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var c=p(e,t,r);if("normal"===c.type){if(n=r.done?"completed":"suspendedYield",c.arg===f)continue;return{value:c.arg,done:r.done}}"throw"===c.type&&(n="completed",r.method="throw",r.arg=c.arg)}}}function E(e,t){var r=t.method,n=e.iterator[r];if(void 0===n)return t.delegate=null,"throw"===r&&e.iterator.return&&(t.method="return",t.arg=void 0,E(e,t),"throw"===t.method)||"return"!==r&&(t.method="throw",t.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=p(n,e.iterator,t.arg);if("throw"===o.type)return t.method="throw",t.arg=o.arg,t.delegate=null,f;var a=o.arg;return a?a.done?(t[e.resultName]=a.value,t.next=e.nextLoc,"return"!==t.method&&(t.method="next",t.arg=void 0),t.delegate=null,f):a:(t.method="throw",t.arg=new TypeError("iterator result is not an object"),t.delegate=null,f)}function N(e){var t={tryLoc:e[0]};1 in e&&(t.catchLoc=e[1]),2 in e&&(t.finallyLoc=e[2],t.afterLoc=e[3]),this.tryEntries.push(t)}function k(e){var t=e.completion||{};t.type="normal",delete t.arg,e.completion=t}function T(e){this.tryEntries=[{tryLoc:"root"}],e.forEach(N,this),this.reset(!0)}function L(e){if(e){var t=e[a];if(t)return t.call(e);if("function"==typeof e.next)return e;if(!isNaN(e.length)){var n=-1,o=function t(){for(;++n<e.length;)if(r.call(e,n))return t.value=e[n],t.done=!1,t;return t.value=void 0,t.done=!0,t};return o.next=o}}return{next:O}}function O(){return{value:void 0,done:!0}}return m.prototype=d,n(w,"constructor",{value:d,configurable:!0}),n(d,"constructor",{value:m,configurable:!0}),m.displayName=s(d,c,"GeneratorFunction"),e.isGeneratorFunction=function(e){var t="function"==typeof e&&e.constructor;return!!t&&(t===m||"GeneratorFunction"===(t.displayName||t.name))},e.mark=function(e){return Object.setPrototypeOf?Object.setPrototypeOf(e,d):(e.__proto__=d,s(e,c,"GeneratorFunction")),e.prototype=Object.create(w),e},e.awrap=function(e){return{__await:e}},g(x.prototype),s(x.prototype,u,(function(){return this})),e.AsyncIterator=x,e.async=function(t,r,n,o,a){void 0===a&&(a=Promise);var i=new x(l(t,r,n,o),a);return e.isGeneratorFunction(r)?i:i.next().then((function(e){return e.done?e.value:i.next()}))},g(w),s(w,c,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),e.keys=function(e){var t=Object(e),r=[];for(var n in t)r.push(n);return r.reverse(),function e(){for(;r.length;){var n=r.pop();if(n in t)return e.value=n,e.done=!1,e}return e.done=!0,e}},e.values=L,T.prototype={constructor:T,reset:function(e){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(k),!e)for(var t in this)"t"===t.charAt(0)&&r.call(this,t)&&!isNaN(+t.slice(1))&&(this[t]=void 0)},stop:function(){this.done=!0;var e=this.tryEntries[0].completion;if("throw"===e.type)throw e.arg;return this.rval},dispatchException:function(e){if(this.done)throw e;var t=this;function n(r,n){return i.type="throw",i.arg=e,t.next=r,n&&(t.method="next",t.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var a=this.tryEntries[o],i=a.completion;if("root"===a.tryLoc)return n("end");if(a.tryLoc<=this.prev){var u=r.call(a,"catchLoc"),c=r.call(a,"finallyLoc");if(u&&c){if(this.prev<a.catchLoc)return n(a.catchLoc,!0);if(this.prev<a.finallyLoc)return n(a.finallyLoc)}else if(u){if(this.prev<a.catchLoc)return n(a.catchLoc,!0)}else{if(!c)throw new Error("try statement without catch or finally");if(this.prev<a.finallyLoc)return n(a.finallyLoc)}}}},abrupt:function(e,t){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var a=o;break}}a&&("break"===e||"continue"===e)&&a.tryLoc<=t&&t<=a.finallyLoc&&(a=null);var i=a?a.completion:{};return i.type=e,i.arg=t,a?(this.method="next",this.next=a.finallyLoc,f):this.complete(i)},complete:function(e,t){if("throw"===e.type)throw e.arg;return"break"===e.type||"continue"===e.type?this.next=e.arg:"return"===e.type?(this.rval=this.arg=e.arg,this.method="return",this.next="end"):"normal"===e.type&&t&&(this.next=t),f},finish:function(e){for(var t=this.tryEntries.length-1;t>=0;--t){var r=this.tryEntries[t];if(r.finallyLoc===e)return this.complete(r.completion,r.afterLoc),k(r),f}},catch:function(e){for(var t=this.tryEntries.length-1;t>=0;--t){var r=this.tryEntries[t];if(r.tryLoc===e){var n=r.completion;if("throw"===n.type){var o=n.arg;k(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(e,t,r){return this.delegate={iterator:L(e),resultName:t,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},e}function u(e,t,r,n,o,a,i){try{var u=e[a](i),c=u.value}catch(e){return void r(e)}u.done?t(c):Promise.resolve(c).then(n,o)}function c(e){return function(){var t=this,r=arguments;return new Promise((function(n,o){var a=e.apply(t,r);function i(e){u(a,n,o,i,c,"next",e)}function c(e){u(a,n,o,i,c,"throw",e)}i(void 0)}))}}function s(){return(s=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)Object.prototype.hasOwnProperty.call(r,n)&&(e[n]=r[n])}return e}).apply(this,arguments)}function l(e,t){e.prototype=Object.create(t.prototype),e.prototype.constructor=e,f(e,t)}function p(e){return(p=Object.setPrototypeOf?Object.getPrototypeOf.bind():function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}function f(e,t){return(f=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(e,t){return e.__proto__=t,e})(e,t)}function h(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],(function(){}))),!0}catch(e){return!1}}function m(e,t,r){return(m=h()?Reflect.construct.bind():function(e,t,r){var n=[null];n.push.apply(n,t);var o=new(Function.bind.apply(e,n));return r&&f(o,r.prototype),o}).apply(null,arguments)}function d(e){var t="function"==typeof Map?new Map:void 0;return(d=function(e){if(null===e||-1===Function.toString.call(e).indexOf("[native code]"))return e;if("function"!=typeof e)throw new TypeError("Super expression must either be null or a function");if(void 0!==t){if(t.has(e))return t.get(e);t.set(e,r)}function r(){return m(e,arguments,p(this).constructor)}return r.prototype=Object.create(e.prototype,{constructor:{value:r,enumerable:!1,writable:!0,configurable:!0}}),f(r,e)})(e)}var v=function(e){function t(t){for(var r,n=arguments.length,o=new Array(n>1?n-1:0),a=1;a<n;a++)o[a-1]=arguments[a];return(r=e.call.apply(e,[this].concat(o))||this).name="ChainUnsupportedError",r.message=t,r}return l(t,e),t}(d(Error)),y=function(e){function t(t){for(var r,n=arguments.length,o=new Array(n>1?n-1:0),a=1;a<n;a++)o[a-1]=arguments[a];return(r=e.call.apply(e,[this].concat(o))||this).name="ChainUnknownError",r.message=t,r}return l(t,e),t}(d(Error)),b=function(e){function t(t){for(var r,n=arguments.length,o=new Array(n>1?n-1:0),a=1;a<n;a++)o[a-1]=arguments[a];return(r=e.call.apply(e,[this].concat(o))||this).name="ConnectorUnsupportedError",r.message="Unsupported connector: "+t+".",r}return l(t,e),t}(d(Error)),w=function(e){function t(){for(var t,r=arguments.length,n=new Array(r),o=0;o<r;o++)n[o]=arguments[o];return(t=e.call.apply(e,[this].concat(n))||this).name="ConnectionRejectedError",t.message="The activation has been rejected by the provider.",t}return l(t,e),t}(d(Error)),g=function(e){function t(){for(var t,r=arguments.length,n=new Array(r),o=0;o<r;o++)n[o]=arguments[o];return(t=e.call.apply(e,[this].concat(n))||this).name="ConnectorConfigError",t}return l(t,e),t}(d(Error));function x(){return C.apply(this,arguments)}function C(){return(C=c(i().mark((function t(){var r;return i().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,new Promise((function(t){t(e(require("@web3-react/fortmatic-connector")))}));case 2:return r=t.sent.FortmaticConnector,t.abrupt("return",{web3ReactConnector:function(e){var t=e.chainId,n=e.apiKey;if(!n)throw new g("The Fortmatic connector requires apiKey to be set.");return new r({apiKey:n,chainId:t})}});case 5:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function E(){return N.apply(this,arguments)}function N(){return(N=c(i().mark((function t(){var r,n,o;return i().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,new Promise((function(t){t(e(require("@web3-react/frame-connector")))}));case 2:return n=(r=t.sent).FrameConnector,o=r.UserRejectedRequestError,t.abrupt("return",{web3ReactConnector:function(e){return new n({supportedChainIds:[e.chainId]})},handleActivationError:function(e){return e instanceof o?new w:e.message.startsWith("JSON.parse")?new Error("There seems to be an issue when trying to connect to Frame."):null}});case 6:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function k(){return T.apply(this,arguments)}function T(){return(T=c(i().mark((function t(){var r,n,o;return i().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,new Promise((function(t){t(e(require("@web3-react/injected-connector")))}));case 2:return n=(r=t.sent).InjectedConnector,o=r.UserRejectedRequestError,t.abrupt("return",{web3ReactConnector:function(e){return new n({supportedChainIds:e.chainId})},handleActivationError:function(e){return e instanceof o?new w:null}});case 6:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function L(){return O.apply(this,arguments)}function O(){return(O=c(i().mark((function t(){var r;return i().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,new Promise((function(t){t(e(require("@web3-react/portis-connector")))}));case 2:return r=t.sent.PortisConnector,t.abrupt("return",{web3ReactConnector:function(e){var t=e.chainId,n=e.dAppId;if(!n)throw new g("The Portis connector requires dAppId to be set.");return new r({dAppId:n,networks:t})}});case 5:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function A(){return j.apply(this,arguments)}function j(){return(j=c(i().mark((function t(){var r,n,o;return i().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,new Promise((function(t){t(e(require("@aragon/provided-connector")))}));case 2:return n=(r=t.sent).ProvidedConnector,o=r.UserRejectedRequestError,t.abrupt("return",{web3ReactConnector:function(e){return new n({provider:e.provider,supportedChainIds:e.chainId})},handleActivationError:function(e){return e instanceof o?new w:null}});case 6:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function I(){return U.apply(this,arguments)}function U(){return(U=c(i().mark((function t(){var r;return i().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,new Promise((function(t){t(e(require("@web3-react/torus-connector")))}));case 2:return r=t.sent.TorusConnector,t.abrupt("return",{web3ReactConnector:function(e){return new r({chainId:e.chainId,constructorOptions:e.constructorOptions,initOptions:e.initOptions})}});case 5:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function _(){return P.apply(this,arguments)}function P(){return(P=c(i().mark((function t(){var r,n,o;return i().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,new Promise((function(t){t(e(require("@web3-react/walletconnect-connector")))}));case 2:return n=(r=t.sent).UserRejectedRequestError,o=r.WalletConnectConnector,t.abrupt("return",{web3ReactConnector:function(e){var t=e.rpc,r=e.bridge,n=e.pollingInterval;if(!t)throw new g("The WalletConnect connector requires rpcUrl to be set.");return Object.values(t).forEach((function(e){if(!/^https?:\/\//.test(e))throw new g("The WalletConnect connector requires rpcUrl to be an HTTP URL.")})),new o({bridge:r,pollingInterval:n,qrcode:!0,rpc:t})},handleActivationError:function(e){return e instanceof n?new w:null}});case 6:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function S(){return M.apply(this,arguments)}function M(){return(M=c(i().mark((function t(){var r;return i().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,new Promise((function(t){t(e(require("@web3-react/walletlink-connector")))}));case 2:return r=t.sent.WalletLinkConnector,t.abrupt("return",{web3ReactConnector:function(e){var t=e.url,n=e.appName,o=e.appLogoUrl;if(1!==e.chainId)throw new g("The WalletLink connector requires chainId to be 1.");if(!/^https?:\/\//.test(t))throw new g("The WalletLink connector requires url to be an HTTP URL.");return new r({url:t,appName:n,appLogoUrl:o})}});case 5:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function R(){return q.apply(this,arguments)}function q(){return(q=c(i().mark((function t(){var r;return i().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,new Promise((function(t){t(e(require("@web3-react/ledger-connector")))}));case 2:return r=t.sent.LedgerConnector,t.abrupt("return",{web3ReactConnector:function(e){var t=e.chainId,n=e.url;if(!n)throw new g("The Ledger connector requires url to be set.");return new r({url:n,chainId:t,pollingInterval:12e3,baseDerivationPath:"m/44'/60'/0'/0"})}});case 5:case"end":return t.stop()}}),t)})))).apply(this,arguments)}!function(e){var t=function(e){var t=Object.prototype,r=t.hasOwnProperty,n=Object.defineProperty||function(e,t,r){e[t]=r.value},o="function"==typeof Symbol?Symbol:{},a=o.iterator||"@@iterator",i=o.asyncIterator||"@@asyncIterator",u=o.toStringTag||"@@toStringTag";function c(e,t,r){return Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}),e[t]}try{c({},"")}catch(e){c=function(e,t,r){return e[t]=r}}function s(e,t,r,o){var a=Object.create((t&&t.prototype instanceof f?t:f).prototype),i=new k(o||[]);return n(a,"_invoke",{value:x(e,r,i)}),a}function l(e,t,r){try{return{type:"normal",arg:e.call(t,r)}}catch(e){return{type:"throw",arg:e}}}e.wrap=s;var p={};function f(){}function h(){}function m(){}var d={};c(d,a,(function(){return this}));var v=Object.getPrototypeOf,y=v&&v(v(T([])));y&&y!==t&&r.call(y,a)&&(d=y);var b=m.prototype=f.prototype=Object.create(d);function w(e){["next","throw","return"].forEach((function(t){c(e,t,(function(e){return this._invoke(t,e)}))}))}function g(e,t){var o;n(this,"_invoke",{value:function(n,a){function i(){return new t((function(o,i){!function n(o,a,i,u){var c=l(e[o],e,a);if("throw"!==c.type){var s=c.arg,p=s.value;return p&&"object"==typeof p&&r.call(p,"__await")?t.resolve(p.__await).then((function(e){n("next",e,i,u)}),(function(e){n("throw",e,i,u)})):t.resolve(p).then((function(e){s.value=e,i(s)}),(function(e){return n("throw",e,i,u)}))}u(c.arg)}(n,a,o,i)}))}return o=o?o.then(i,i):i()}})}function x(e,t,r){var n="suspendedStart";return function(o,a){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw a;return{value:void 0,done:!0}}for(r.method=o,r.arg=a;;){var i=r.delegate;if(i){var u=C(i,r);if(u){if(u===p)continue;return u}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var c=l(e,t,r);if("normal"===c.type){if(n=r.done?"completed":"suspendedYield",c.arg===p)continue;return{value:c.arg,done:r.done}}"throw"===c.type&&(n="completed",r.method="throw",r.arg=c.arg)}}}function C(e,t){var r=t.method,n=e.iterator[r];if(void 0===n)return t.delegate=null,"throw"===r&&e.iterator.return&&(t.method="return",t.arg=void 0,C(e,t),"throw"===t.method)||"return"!==r&&(t.method="throw",t.arg=new TypeError("The iterator does not provide a '"+r+"' method")),p;var o=l(n,e.iterator,t.arg);if("throw"===o.type)return t.method="throw",t.arg=o.arg,t.delegate=null,p;var a=o.arg;return a?a.done?(t[e.resultName]=a.value,t.next=e.nextLoc,"return"!==t.method&&(t.method="next",t.arg=void 0),t.delegate=null,p):a:(t.method="throw",t.arg=new TypeError("iterator result is not an object"),t.delegate=null,p)}function E(e){var t={tryLoc:e[0]};1 in e&&(t.catchLoc=e[1]),2 in e&&(t.finallyLoc=e[2],t.afterLoc=e[3]),this.tryEntries.push(t)}function N(e){var t=e.completion||{};t.type="normal",delete t.arg,e.completion=t}function k(e){this.tryEntries=[{tryLoc:"root"}],e.forEach(E,this),this.reset(!0)}function T(e){if(e){var t=e[a];if(t)return t.call(e);if("function"==typeof e.next)return e;if(!isNaN(e.length)){var n=-1,o=function t(){for(;++n<e.length;)if(r.call(e,n))return t.value=e[n],t.done=!1,t;return t.value=void 0,t.done=!0,t};return o.next=o}}return{next:L}}function L(){return{value:void 0,done:!0}}return h.prototype=m,n(b,"constructor",{value:m,configurable:!0}),n(m,"constructor",{value:h,configurable:!0}),h.displayName=c(m,u,"GeneratorFunction"),e.isGeneratorFunction=function(e){var t="function"==typeof e&&e.constructor;return!!t&&(t===h||"GeneratorFunction"===(t.displayName||t.name))},e.mark=function(e){return Object.setPrototypeOf?Object.setPrototypeOf(e,m):(e.__proto__=m,c(e,u,"GeneratorFunction")),e.prototype=Object.create(b),e},e.awrap=function(e){return{__await:e}},w(g.prototype),c(g.prototype,i,(function(){return this})),e.AsyncIterator=g,e.async=function(t,r,n,o,a){void 0===a&&(a=Promise);var i=new g(s(t,r,n,o),a);return e.isGeneratorFunction(r)?i:i.next().then((function(e){return e.done?e.value:i.next()}))},w(b),c(b,u,"Generator"),c(b,a,(function(){return this})),c(b,"toString",(function(){return"[object Generator]"})),e.keys=function(e){var t=Object(e),r=[];for(var n in t)r.push(n);return r.reverse(),function e(){for(;r.length;){var n=r.pop();if(n in t)return e.value=n,e.done=!1,e}return e.done=!0,e}},e.values=T,k.prototype={constructor:k,reset:function(e){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(N),!e)for(var t in this)"t"===t.charAt(0)&&r.call(this,t)&&!isNaN(+t.slice(1))&&(this[t]=void 0)},stop:function(){this.done=!0;var e=this.tryEntries[0].completion;if("throw"===e.type)throw e.arg;return this.rval},dispatchException:function(e){if(this.done)throw e;var t=this;function n(r,n){return i.type="throw",i.arg=e,t.next=r,n&&(t.method="next",t.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var a=this.tryEntries[o],i=a.completion;if("root"===a.tryLoc)return n("end");if(a.tryLoc<=this.prev){var u=r.call(a,"catchLoc"),c=r.call(a,"finallyLoc");if(u&&c){if(this.prev<a.catchLoc)return n(a.catchLoc,!0);if(this.prev<a.finallyLoc)return n(a.finallyLoc)}else if(u){if(this.prev<a.catchLoc)return n(a.catchLoc,!0)}else{if(!c)throw new Error("try statement without catch or finally");if(this.prev<a.finallyLoc)return n(a.finallyLoc)}}}},abrupt:function(e,t){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var a=o;break}}a&&("break"===e||"continue"===e)&&a.tryLoc<=t&&t<=a.finallyLoc&&(a=null);var i=a?a.completion:{};return i.type=e,i.arg=t,a?(this.method="next",this.next=a.finallyLoc,p):this.complete(i)},complete:function(e,t){if("throw"===e.type)throw e.arg;return"break"===e.type||"continue"===e.type?this.next=e.arg:"return"===e.type?(this.rval=this.arg=e.arg,this.method="return",this.next="end"):"normal"===e.type&&t&&(this.next=t),p},finish:function(e){for(var t=this.tryEntries.length-1;t>=0;--t){var r=this.tryEntries[t];if(r.finallyLoc===e)return this.complete(r.completion,r.afterLoc),N(r),p}},catch:function(e){for(var t=this.tryEntries.length-1;t>=0;--t){var r=this.tryEntries[t];if(r.tryLoc===e){var n=r.completion;if("throw"===n.type){var o=n.arg;N(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(e,t,r){return this.delegate={iterator:T(e),resultName:t,nextLoc:r},"next"===this.method&&(this.arg=void 0),p}},e}({});try{regeneratorRuntime=t}catch(e){"object"==typeof globalThis?globalThis.regeneratorRuntime=t:Function("r","regeneratorRuntime = r")(t)}}();var B={name:"Ether",symbol:"ETH",decimals:18},F={name:"Matic Token",symbol:"MATIC",decimals:18},G={name:"Avax",symbol:"AVAX",decimals:9},W={name:"ONE Token",symbol:"ONE",decimals:18},D={name:"Binance Token",symbol:"BNB",decimals:18},H={name:"Thunder Token",symbol:"TT",decimals:18},V={name:"Celo",symbol:"CELO",decimals:18},K={name:"METIS",symbol:"METIS",decimals:18},Y={name:"FTM",symbol:"FTM",decimals:18},z={name:"EVMOS",symbol:"EVMOS",decimals:18},J=new Map([[1,{id:1,nativeCurrency:B,type:"main",fullName:"Ethereum Mainnet",shortName:"Ethereum",explorerUrl:"https://etherscan.io",testnet:!1}],[3,{id:3,nativeCurrency:B,type:"ropsten",fullName:"Ropsten Testnet",shortName:"Ropsten",explorerUrl:"https://ropsten.etherscan.io",testnet:!0}],[4,{id:4,nativeCurrency:B,type:"rinkeby",fullName:"Rinkeby Testnet",shortName:"Rinkeby",explorerUrl:"https://rinkeby.etherscan.io",testnet:!0}],[5,{id:5,nativeCurrency:B,type:"goerli",fullName:"Goerli Testnet",shortName:"Goerli",explorerUrl:"https://goerli.etherscan.io",testnet:!0}],[42,{id:42,nativeCurrency:B,type:"kovan",fullName:"Kovan Testnet",shortName:"Kovan",explorerUrl:"https://kovan.etherscan.io",testnet:!0}],[43112,{id:43112,nativeCurrency:G,type:"avalocal",shortName:"Avalanche Local",fullName:"Avalanche Local",testnet:!0}],[43113,{id:43113,nativeCurrency:G,type:"fuji",fullName:"Avalanche Fuji",shortName:"Fuji",explorerUrl:"https://testnet.snowtrace.io/",testnet:!0}],[43114,{id:43114,nativeCurrency:G,type:"avalanche",fullName:"Avalanche Mainnet",shortName:"Avalanche",explorerUrl:"https://snowtrace.io/",testnet:!1}],[100,{id:100,nativeCurrency:{name:"xDAI",symbol:"xDAI",decimals:18},type:"xdai",fullName:"xDAI",shortName:"xDAI",explorerUrl:"https://blockscout.com/xdai/mainnet/",testnet:!1}],[137,{id:137,nativeCurrency:F,type:"matic",fullName:"Polygon Mainnet",shortName:"Polygon",explorerUrl:"https://polygonscan.com",testnet:!1}],[80001,{id:80001,nativeCurrency:F,type:"mumbai",fullName:"Mumbai Testnet",shortName:"Mumbai",explorerUrl:"https://mumbai.polygonscan.com",testnet:!0}],[250,{id:250,nativeCurrency:Y,type:"fantom",fullName:"Fantom Opera Mainnet",shortName:"FTM",explorerUrl:"https://ftmscan.com/",testnet:!1}],[4002,{id:4002,nativeCurrency:Y,type:"fantom",fullName:"Fantom Opera Testnet",shortName:"FTM",explorerUrl:"https://testnet.ftmscan.com/",testnet:!0}],[9e3,{id:9e3,nativeCurrency:z,type:"evmos",fullName:"Evmos Testnet",shortName:"EVMOS",explorerUrl:"https://eth.bd.evmos.dev:8545",testnet:!0}],[9001,{id:9001,nativeCurrency:z,type:"evmos",fullName:"Evmos mainnet",shortName:"EVMOS",explorerUrl:"https://eth.bd.evmos.org:8545",testnet:!1}],[16666e5,{id:16666e5,nativeCurrency:W,type:"harmony",fullName:"Harmony ONE",shortName:"Harmony",explorerUrl:"https://explorer.harmony.one/",testnet:!1}],[16667e5,{id:16667e5,nativeCurrency:W,type:"harmonyTest",fullName:"Harmony ONE Testnet",shortName:"Harmony Testnet",explorerUrl:"https://explorer.testnet.harmony.one/",testnet:!0}],[56,{id:56,nativeCurrency:D,type:"bsc",fullName:"Binance Smart Chain",shortName:"BSC",explorerUrl:"https://bscscan.com/",testnet:!1}],[97,{id:97,nativeCurrency:D,type:"bscTest",fullName:"Binance Smart Chain Testnet",shortName:"BSC Testnet",explorerUrl:"https://testnet.bscscan.com/",testnet:!0}],[108,{id:108,nativeCurrency:H,type:"thundercore",fullName:"ThunderCore Mainnet",shortName:"ThunderCore",explorerUrl:"https://scan.thundercore.com/",testnet:!1}],[18,{id:18,nativeCurrency:H,type:"thundercoreTest",fullName:"ThunderCore Testnet",shortName:"ThunderCore Testnet",explorerUrl:"https://scan-testnet.thundercore.com/",testnet:!0}],[421611,{id:421611,nativeCurrency:B,type:"arbitrumTest",fullName:"Arbitrum Testnet",shortName:"Arbitrum Testnet",explorerUrl:"https://testnet.arbiscan.io/",testnet:!0}],[42161,{id:42161,nativeCurrency:B,type:"arbitrum",fullName:"Arbitrum Mainnet",shortName:"Arbitrum",explorerUrl:"https://arbiscan.io/",testnet:!1}],[42220,{id:42220,nativeCurrency:V,type:"celo",fullName:"Celo (Mainnet)",shortName:"Celo",explorerUrl:"https://explorer.celo.org/",testnet:!1}],[44787,{id:44787,nativeCurrency:V,type:"celoTest",fullName:"Celo (Alfajores Testnet)",shortName:"Alfajores",explorerUrl:"https://alfajores-blockscout.celo-testnet.org/",testnet:!0}],[588,{id:588,nativeCurrency:K,type:"stardust",fullName:"Metis Stardust Testnet",shortName:"Stardust",explorerUrl:"https://stardust-explorer.metis.io/",testnet:!0}],[1088,{id:1088,nativeCurrency:K,type:"andromeda",fullName:"Metis Andromeda",shortName:"Andromeda",explorerUrl:"https://andromeda-explorer.metis.io/",testnet:!1}],[1313161555,{id:1313161555,nativeCurrency:B,type:"aurora",fullName:"Aurora Testnet",shortName:"AuroraTest",explorerUrl:"https://explorer.testnet.aurora.dev/",testnet:!0}],[1313161554,{id:1313161554,nativeCurrency:B,type:"aurora",fullName:"Aurora Mainnet",shortName:"Aurora",explorerUrl:"https://explorer.mainnet.aurora.dev/",testnet:!1}],[1287,{id:1287,nativeCurrency:{name:"DEV",symbol:"DEV",decimals:18},type:"moonbase",fullName:"moonbase",shortName:"Moonbase Alphanet",explorerUrl:"https://moonbase.moonscan.io/",testnet:!0}],[1285,{id:1285,nativeCurrency:{name:"Moonriver",symbol:"MOVR",decimals:18},type:"moonriver",fullName:"Moonriver",shortName:"Moonriver",explorerUrl:"https://moonriver.moonscan.io/",testnet:!1}],[1284,{id:1284,nativeCurrency:{name:"Glimmer",symbol:"GLMR",decimals:18},type:"moonbeam",fullName:"Moonbeam",shortName:"Moonbeam",explorerUrl:"https://moonbeam.moonscan.io/",testnet:!1}],[1337,{id:1337,type:"local",testnet:!0}],[5777,{id:5777,type:"ganache",testnet:!0}],[128,{id:128,nativeCurrency:{name:"HECO",symbol:"HT",decimals:18},type:"main",fullName:"HECO Mainnet",shortName:"HECO",explorerUrl:"https://hecoscan.xyz/",testnet:!1}],[42161,{id:42161,nativeCurrency:B,type:"main",fullName:"Arbitrum",shortName:"Arbitrum",explorerUrl:"https://arbiscan.io/",testnet:!1}],[421613,{id:421613,nativeCurrency:B,type:"testnet",fullName:"Arbitrum Goerli Testnet",shortName:"Arbitrum",explorerUrl:"https://goerli.arbiscan.io/",testnet:!0}],[11155111,{id:11155111,nativeCurrency:B,type:"testnet",fullName:"Sepolia Testnet",shortName:"Sepolia",explorerUrl:"https://sepolia.etherscan.io/",testnet:!0}]]);function X(e){var t=J.get(e);if(!t)throw new y("Unknown chain id: "+e);return t}function Q(){return Array.from(J.keys())}var Z={__proto__:null,isKnownChain:function(e){return J.has(e)},getChainInformation:X,getKnownChainsIds:Q,getKnownChainInformation:function(){return Array.from(J.values())},getDefaultChainId:function(){return 1}},$=new Map([["block","block"],["transaction","tx"],["address","address"],["token","token"]]);function ee(e){if(function(e){return"object"==typeof e&&null!==e&&"jsonrpc"in e}(e)){if(e.error)throw new Error(e.error);return e.result||null}return e||null}function te(e,t,r){return re.apply(this,arguments)}function re(){return(re=c(i().mark((function e(t,r,n){return i().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(!t.request){e.next=2;break}return e.abrupt("return",t.request({method:r,params:n}).then(ee));case 2:if(!t.sendAsync||!t.selectedAddress){e.next=4;break}return e.abrupt("return",new Promise((function(e,o){t.sendAsync({method:r,params:n,from:t.selectedAddress,jsonrpc:"2.0",id:0},(function(t,r){t?o(t):e(r)}))})).then(ee));case 4:if(!t.send){e.next=6;break}return e.abrupt("return",t.send(r,n).then(ee));case 6:throw new Error("The Ethereum provider doesn’t seem to provide a request method.");case 7:case"end":return e.stop()}}),e)})))).apply(this,arguments)}function ne(){return(ne=c(i().mark((function e(t,r){return i().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,e.next=3,te(t,"eth_getCode",[r]);case 3:return e.abrupt("return","0x"!==e.sent);case 7:return e.prev=7,e.t0=e.catch(0),e.abrupt("return",!1);case 10:case"end":return e.stop()}}),e,null,[[0,7]])})))).apply(this,arguments)}function oe(e,t){return ae.apply(this,arguments)}function ae(){return(ae=c(i().mark((function e(t,r){return i().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",te(t,"eth_getBalance",[r,"latest"]));case 1:case"end":return e.stop()}}),e)})))).apply(this,arguments)}function ie(){return(ie=c(i().mark((function e(t){return i().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",te(t,"eth_blockNumber",[]));case 1:case"end":return e.stop()}}),e)})))).apply(this,arguments)}function ue(e,t){var r,n=!1,o=function(){var e=c(i().mark((function e(a,u){var c;return i().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,a();case 2:c=e.sent,n||(u(c),r=setTimeout(o.bind(null,a,u),t));case 4:case"end":return e.stop()}}),e)})));return function(t,r){return e.apply(this,arguments)}}();return function(){var t=e.apply(void 0,arguments),a=t.request,i=t.onResult;return n=!1,o(a,i),function(){n=!0,clearTimeout(r)}}}var ce=function(e){var t;null==(t=localStorage)||t.setItem("LAST_ACTIVE_ACCOUNT",e)},se=function(){var e;return null==(e=localStorage)?void 0:e.getItem("LAST_ACTIVE_ACCOUNT")},le=function(e){var t;null==(t=localStorage)||t.setItem("LAST_WALLET_CONNECTOR",e)};const pe=require("./Cipher.png"),fe=require("./Fortmatic.svg"),he=require("./Frame.png"),me=require("./Metamask.png"),de=require("./Portis.svg"),ve=require("./Status.png"),ye=require("./wallet.svg"),be=require("./walletconnect.png");var we=new Map([{id:"frame",name:"Frame",type:"Desktop",image:he,strings:{"your Ethereum wallet":"Frame"}},{id:"metamask",name:"Metamask",type:"Desktop",image:me,strings:{"your Ethereum wallet":"Metamask"}},{id:"status",name:"Status",type:"Mobile",image:ve,strings:{"your Ethereum wallet":"Status"}},{id:"cipher",name:"Cipher",type:"Mobile",image:pe,strings:{"your Ethereum wallet":"Cipher"}},{id:"fortmatic",name:"Fortmatic",type:"Any",image:fe,strings:{"your Ethereum wallet":"Fortmatic"}},{id:"portis",name:"Portis",type:"Any",image:de,strings:{"your Ethereum wallet":"Portis"}},{id:"walletconnect",name:"WalletConnect",type:"Any",image:be,strings:{"your Ethereum wallet":"WalletConnect"}},{id:"unknown",name:"Unknown",type:"Desktop",image:ye,strings:{"your Ethereum wallet":"your wallet"}}].map((function(e){return[e.id,e]})));function ge(e){return we.get(e)}function xe(e){return"injected"===e||"provided"===e?ge((t=window.ethereum)&&"object"==typeof navigator&&"string"==typeof navigator.userAgent&&navigator.userAgent.indexOf("Electron")>=0?"frame":t&&t.isMetaMask?"metamask":"unknown")||ge("unknown"):ge(e)||ge("unknown");var t}var Ce=n.createContext(null);function Ee(e){var t=e.children,r=e.connectors,u=e.autoConnect,l=e.pollBalanceInterval,p=e.pollBlockNumberInterval;if(null!==n.useContext(Ce))throw new Error("<UseWalletProvider /> has already been declared.");var f=n.useState(null),h=f[0],m=f[1],d=n.useState(null),y=d[0],w=d[1],g=n.useState(null),C=g[0],N=g[1],T=n.useState("disconnected"),O=T[0],j=T[1],U=o.useWeb3React(),P=n.useRef(0),M=U.account,q=U.chainId,B=U.library,F=U.error,G=function(e){var t=e.account,r=e.ethereum,o=e.pollBalanceInterval,u=n.useState("-1"),s=u[0],l=u[1];return n.useEffect((function(){if(t&&r){var e=!1,n=ue((function(t,r,n){var o="-1";return{request:function(){return c(i().mark((function e(){return i().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",oe(r,t).then((function(e){return e?a.BigInt(e).toString():"-1"})).catch((function(){return"-1"})));case 1:case"end":return e.stop()}}),e)})))()},onResult:function(t){e||t===o||(o=t,n(t))}}}),o)(t,r,l);return function(){e=!0,n(),l("-1")}}}),[t,r,o]),s}({account:M,ethereum:B,pollBalanceInterval:l}),W=function(e){var t=e.ethereum,r=e.pollBlockNumberInterval,o=n.useRef(null),i=n.useRef(new Set),u=n.useCallback((function(e){i.current.has(e)||(e(o.current),i.current.add(e))}),[]),c=n.useCallback((function(e){i.current.delete(e)}),[]),s=n.useCallback((function(e){o.current!==e&&(o.current=e,i.current.forEach((function(t){return t(e)})))}),[]);return n.useEffect((function(){if(t){var e=!1,n=ue((function(){return{request:function(){return function(e){return ie.apply(this,arguments)}(t)},onResult:function(t){e||s(null===t?null:a.BigInt(t).toString())}}}),r)();return function(){e=!0,n()}}s(null)}),[t,r,s]),{addBlockNumberListener:u,removeBlockNumberListener:c}}({ethereum:B,pollBlockNumberInterval:p}),D=W.addBlockNumberListener,H=W.removeBlockNumberListener,V=n.useMemo((function(){return function(e){void 0===e&&(e={});for(var t={fortmatic:[x,null],frame:[E,null],injected:[k,null],portis:[L,null],provided:[A,null],torus:[I,null],walletconnect:[_,null],walletlink:[S,null],ledger:[R,null]},r=0,n=Object.entries(e);r<n.length;r++){var o=n[r],a=o[0],i=o[1];"function"!=typeof i?t[a]&&(t[a][1]=i):t[a]=[i,null]}return t}(r)}),[r]),K=n.useMemo((function(){return q||1}),[q]),Y=n.useCallback((function(){var e;U.active&&U.deactivate(),null==(e=localStorage)||e.removeItem("LAST_ACTIVE_ACCOUNT"),m(null),w(null),j("disconnected")}),[U]);n.useMemo((function(){F instanceof o.UnsupportedChainIdError&&(j("error"),w(new v(F.message)))}),[F]);var z=n.useCallback(function(){var e=c(i().mark((function e(t){var r,n,a,u,c,l,p,f;return i().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(void 0===t&&(t="injected"),r=++P.current,Y(),r===P.current){e.next=5;break}return e.abrupt("return");case 5:if(V[t]){e.next=9;break}return j("error"),w(new b(t)),e.abrupt("return");case 9:return j("connecting"),a=(n=V[t]||[])[0],u=n[1],e.next=13,null==a?void 0:a();case 13:if(l=null==(c=e.sent)||null==c.web3ReactConnector?void 0:c.web3ReactConnector(s({},u||{}))){e.next=19;break}return j("error"),w(new b(t)),e.abrupt("return");case 19:return e.prev=19,m(t),e.next=23,U.activate(l,void 0,!0);case 23:if(le(t),"injected"!==t){e.next=30;break}return e.next=27,l.getAccount();case 27:(p=e.sent)&&ce(p),l.getProvider().then((function(e){e.on("accountsChanged",(function(e){ce(e[0])}))}));case 30:j("connected"),e.next=48;break;case 33:if(e.prev=33,e.t0=e.catch(19),r===P.current){e.next=37;break}return e.abrupt("return");case 37:if(m(null),j("error"),!(e.t0 instanceof o.UnsupportedChainIdError)){e.next=42;break}return w(new v(e.t0.message)),e.abrupt("return");case 42:if(!c.handleActivationError){e.next=47;break}if(!(f=c.handleActivationError(e.t0))){e.next=47;break}return w(f),e.abrupt("return");case 47:w(e.t0);case 48:case"end":return e.stop()}}),e,null,[[19,33]])})));return function(t){return e.apply(this,arguments)}}(),[V,Y,U]);n.useEffect((function(){if(u){var e,t=null==(e=localStorage)?void 0:e.getItem("LAST_WALLET_CONNECTOR");se()&&"injected"===t&&Object.keys(V).some((function(e){return"injected"===e}))&&z()}}),[]),n.useEffect((function(){if(M&&B){var e=!1;return N(null),function(e,t){return ne.apply(this,arguments)}(B,M).then((function(t){e||(j("connected"),N(t?"contract":"normal"))})),function(){e=!0,j("disconnected"),N(null)}}}),[M,B]);var J=n.useMemo((function(){return{_web3ReactContext:U,account:M||null,balance:G,chainId:K,connect:z,connector:h,connectors:V,error:y,ethereum:B,isConnected:function(){return"connected"===O},networkName:X(K).type,providerInfo:xe(h||"unknown"),reset:Y,status:O,type:C}}),[M,G,K,z,h,V,y,B,C,Y,O,U]);return n.createElement(Ce.Provider,{value:{addBlockNumberListener:D,pollBalanceInterval:l,pollBlockNumberInterval:p,removeBlockNumberListener:H,wallet:J}},t)}function Ne(e){return n.createElement(o.Web3ReactProvider,{getLibrary:function(e){return e}},n.createElement(Ee,Object.assign({},e)))}Ee.propTypes={children:r.node,connectors:r.objectOf(r.object),autoConnect:r.bool,pollBalanceInterval:r.number,pollBlockNumberInterval:r.number},Ee.defaultProps={connectors:{},autoConnect:!1,pollBalanceInterval:2e3,pollBlockNumberInterval:5e3},Ne.propTypes=Ee.propTypes,Ne.defaultProps=Ee.defaultProps,exports.ChainUnsupportedError=v,exports.ConnectionRejectedError=w,exports.ConnectorUnsupportedError=b,exports.UseWalletProvider=Ne,exports.blockExplorerUrl=function(e,t,r){if(!Q().includes(r))return"";if(!$.has(e))throw new Error("type not supported.");return X(r).explorerUrl+"/"+$.get(e)+"/"+t},exports.chains=Z,exports.getLastActiveAccount=se,exports.getProviderFromUseWalletId=xe,exports.getProviderString=function(e,t){void 0===t&&(t="unknown");var r=ge(t);return r&&r.strings[e]||e},exports.useWallet=function(){var e=n.useContext(Ce);if(null===e)throw new Error("useWallet() can only be used inside of <UseWalletProvider />, please declare it at a higher level.");var t=function(){var e=n.useContext(Ce),t=n.useState(null),r=t[0],o=t[1],a=n.useRef(!1),i=n.useCallback((function(){return null===e?null:(a.current=!0,e.addBlockNumberListener(o),r)}),[e,r]);return n.useEffect((function(){if(a.current&&null!==e)return e.addBlockNumberListener(o),function(){e.removeBlockNumberListener(o)}}),[a,e]),i}(),r=e.wallet;return n.useMemo((function(){return s({},r,{getBlockNumber:t})}),[t,r])};
+'use strict';
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+function _interopNamespace(e) {
+  if (e && e.__esModule) { return e; } else {
+    var n = {};
+    if (e) {
+      Object.keys(e).forEach(function (k) {
+        var d = Object.getOwnPropertyDescriptor(e, k);
+        Object.defineProperty(n, k, d.get ? d : {
+          enumerable: true,
+          get: function () {
+            return e[k];
+          }
+        });
+      });
+    }
+    n['default'] = e;
+    return n;
+  }
+}
+
+var PropTypes = require('prop-types');
+var React = require('react');
+var core = require('@web3-react/core');
+var JSBI = _interopDefault(require('jsbi'));
+
+function _regeneratorRuntime() {
+  _regeneratorRuntime = function () {
+    return exports;
+  };
+  var exports = {},
+    Op = Object.prototype,
+    hasOwn = Op.hasOwnProperty,
+    defineProperty = Object.defineProperty || function (obj, key, desc) {
+      obj[key] = desc.value;
+    },
+    $Symbol = "function" == typeof Symbol ? Symbol : {},
+    iteratorSymbol = $Symbol.iterator || "@@iterator",
+    asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator",
+    toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+  function define(obj, key, value) {
+    return Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: !0,
+      configurable: !0,
+      writable: !0
+    }), obj[key];
+  }
+  try {
+    define({}, "");
+  } catch (err) {
+    define = function (obj, key, value) {
+      return obj[key] = value;
+    };
+  }
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator,
+      generator = Object.create(protoGenerator.prototype),
+      context = new Context(tryLocsList || []);
+    return defineProperty(generator, "_invoke", {
+      value: makeInvokeMethod(innerFn, self, context)
+    }), generator;
+  }
+  function tryCatch(fn, obj, arg) {
+    try {
+      return {
+        type: "normal",
+        arg: fn.call(obj, arg)
+      };
+    } catch (err) {
+      return {
+        type: "throw",
+        arg: err
+      };
+    }
+  }
+  exports.wrap = wrap;
+  var ContinueSentinel = {};
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+  var IteratorPrototype = {};
+  define(IteratorPrototype, iteratorSymbol, function () {
+    return this;
+  });
+  var getProto = Object.getPrototypeOf,
+    NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype);
+  var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype);
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function (method) {
+      define(prototype, method, function (arg) {
+        return this._invoke(method, arg);
+      });
+    });
+  }
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if ("throw" !== record.type) {
+        var result = record.arg,
+          value = result.value;
+        return value && "object" == typeof value && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) {
+          invoke("next", value, resolve, reject);
+        }, function (err) {
+          invoke("throw", err, resolve, reject);
+        }) : PromiseImpl.resolve(value).then(function (unwrapped) {
+          result.value = unwrapped, resolve(result);
+        }, function (error) {
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+      reject(record.arg);
+    }
+    var previousPromise;
+    defineProperty(this, "_invoke", {
+      value: function (method, arg) {
+        function callInvokeWithMethodAndArg() {
+          return new PromiseImpl(function (resolve, reject) {
+            invoke(method, arg, resolve, reject);
+          });
+        }
+        return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
+      }
+    });
+  }
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = "suspendedStart";
+    return function (method, arg) {
+      if ("executing" === state) throw new Error("Generator is already running");
+      if ("completed" === state) {
+        if ("throw" === method) throw arg;
+        return doneResult();
+      }
+      for (context.method = method, context.arg = arg;;) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+        if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) {
+          if ("suspendedStart" === state) throw state = "completed", context.arg;
+          context.dispatchException(context.arg);
+        } else "return" === context.method && context.abrupt("return", context.arg);
+        state = "executing";
+        var record = tryCatch(innerFn, self, context);
+        if ("normal" === record.type) {
+          if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue;
+          return {
+            value: record.arg,
+            done: context.done
+          };
+        }
+        "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg);
+      }
+    };
+  }
+  function maybeInvokeDelegate(delegate, context) {
+    var methodName = context.method,
+      method = delegate.iterator[methodName];
+    if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator.return && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel;
+    var record = tryCatch(method, delegate.iterator, context.arg);
+    if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel;
+    var info = record.arg;
+    return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel);
+  }
+  function pushTryEntry(locs) {
+    var entry = {
+      tryLoc: locs[0]
+    };
+    1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry);
+  }
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal", delete record.arg, entry.completion = record;
+  }
+  function Context(tryLocsList) {
+    this.tryEntries = [{
+      tryLoc: "root"
+    }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0);
+  }
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) return iteratorMethod.call(iterable);
+      if ("function" == typeof iterable.next) return iterable;
+      if (!isNaN(iterable.length)) {
+        var i = -1,
+          next = function next() {
+            for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next;
+            return next.value = undefined, next.done = !0, next;
+          };
+        return next.next = next;
+      }
+    }
+    return {
+      next: doneResult
+    };
+  }
+  function doneResult() {
+    return {
+      value: undefined,
+      done: !0
+    };
+  }
+  return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", {
+    value: GeneratorFunctionPrototype,
+    configurable: !0
+  }), defineProperty(GeneratorFunctionPrototype, "constructor", {
+    value: GeneratorFunction,
+    configurable: !0
+  }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) {
+    var ctor = "function" == typeof genFun && genFun.constructor;
+    return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name));
+  }, exports.mark = function (genFun) {
+    return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun;
+  }, exports.awrap = function (arg) {
+    return {
+      __await: arg
+    };
+  }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
+    return this;
+  }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    void 0 === PromiseImpl && (PromiseImpl = Promise);
+    var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl);
+    return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) {
+      return result.done ? result.value : iter.next();
+    });
+  }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () {
+    return this;
+  }), define(Gp, "toString", function () {
+    return "[object Generator]";
+  }), exports.keys = function (val) {
+    var object = Object(val),
+      keys = [];
+    for (var key in object) keys.push(key);
+    return keys.reverse(), function next() {
+      for (; keys.length;) {
+        var key = keys.pop();
+        if (key in object) return next.value = key, next.done = !1, next;
+      }
+      return next.done = !0, next;
+    };
+  }, exports.values = values, Context.prototype = {
+    constructor: Context,
+    reset: function (skipTempReset) {
+      if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined);
+    },
+    stop: function () {
+      this.done = !0;
+      var rootRecord = this.tryEntries[0].completion;
+      if ("throw" === rootRecord.type) throw rootRecord.arg;
+      return this.rval;
+    },
+    dispatchException: function (exception) {
+      if (this.done) throw exception;
+      var context = this;
+      function handle(loc, caught) {
+        return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught;
+      }
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i],
+          record = entry.completion;
+        if ("root" === entry.tryLoc) return handle("end");
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc"),
+            hasFinally = hasOwn.call(entry, "finallyLoc");
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
+            if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
+          } else {
+            if (!hasFinally) throw new Error("try statement without catch or finally");
+            if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
+          }
+        }
+      }
+    },
+    abrupt: function (type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+      finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null);
+      var record = finallyEntry ? finallyEntry.completion : {};
+      return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record);
+    },
+    complete: function (record, afterLoc) {
+      if ("throw" === record.type) throw record.arg;
+      return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel;
+    },
+    finish: function (finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel;
+      }
+    },
+    catch: function (tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if ("throw" === record.type) {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+      throw new Error("illegal catch attempt");
+    },
+    delegateYield: function (iterable, resultName, nextLoc) {
+      return this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      }, "next" === this.method && (this.arg = undefined), ContinueSentinel;
+    }
+  }, exports;
+}
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+      args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+      _next(undefined);
+    });
+  };
+}
+function _extends() {
+  _extends = Object.assign ? Object.assign.bind() : function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return _extends.apply(this, arguments);
+}
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  _setPrototypeOf(subClass, superClass);
+}
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+  return _setPrototypeOf(o, p);
+}
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+  try {
+    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+function _construct(Parent, args, Class) {
+  if (_isNativeReflectConstruct()) {
+    _construct = Reflect.construct.bind();
+  } else {
+    _construct = function _construct(Parent, args, Class) {
+      var a = [null];
+      a.push.apply(a, args);
+      var Constructor = Function.bind.apply(Parent, a);
+      var instance = new Constructor();
+      if (Class) _setPrototypeOf(instance, Class.prototype);
+      return instance;
+    };
+  }
+  return _construct.apply(null, arguments);
+}
+function _isNativeFunction(fn) {
+  return Function.toString.call(fn).indexOf("[native code]") !== -1;
+}
+function _wrapNativeSuper(Class) {
+  var _cache = typeof Map === "function" ? new Map() : undefined;
+  _wrapNativeSuper = function _wrapNativeSuper(Class) {
+    if (Class === null || !_isNativeFunction(Class)) return Class;
+    if (typeof Class !== "function") {
+      throw new TypeError("Super expression must either be null or a function");
+    }
+    if (typeof _cache !== "undefined") {
+      if (_cache.has(Class)) return _cache.get(Class);
+      _cache.set(Class, Wrapper);
+    }
+    function Wrapper() {
+      return _construct(Class, arguments, _getPrototypeOf(this).constructor);
+    }
+    Wrapper.prototype = Object.create(Class.prototype, {
+      constructor: {
+        value: Wrapper,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    return _setPrototypeOf(Wrapper, Class);
+  };
+  return _wrapNativeSuper(Class);
+}
+
+var ChainUnsupportedError = /*#__PURE__*/function (_Error) {
+  _inheritsLoose(ChainUnsupportedError, _Error);
+  function ChainUnsupportedError(message) {
+    var _this;
+    for (var _len = arguments.length, params = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      params[_key - 1] = arguments[_key];
+    }
+    _this = _Error.call.apply(_Error, [this].concat(params)) || this;
+    _this.name = 'ChainUnsupportedError';
+    _this.message = message;
+    return _this;
+  }
+  return ChainUnsupportedError;
+}( /*#__PURE__*/_wrapNativeSuper(Error));
+var ChainUnknownError = /*#__PURE__*/function (_Error2) {
+  _inheritsLoose(ChainUnknownError, _Error2);
+  function ChainUnknownError(message) {
+    var _this2;
+    for (var _len2 = arguments.length, params = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+      params[_key2 - 1] = arguments[_key2];
+    }
+    _this2 = _Error2.call.apply(_Error2, [this].concat(params)) || this;
+    _this2.name = 'ChainUnknownError';
+    _this2.message = message;
+    return _this2;
+  }
+  return ChainUnknownError;
+}( /*#__PURE__*/_wrapNativeSuper(Error));
+var ConnectorUnsupportedError = /*#__PURE__*/function (_Error3) {
+  _inheritsLoose(ConnectorUnsupportedError, _Error3);
+  function ConnectorUnsupportedError(connectorId) {
+    var _this3;
+    for (var _len3 = arguments.length, params = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
+      params[_key3 - 1] = arguments[_key3];
+    }
+    _this3 = _Error3.call.apply(_Error3, [this].concat(params)) || this;
+    _this3.name = 'ConnectorUnsupportedError';
+    _this3.message = "Unsupported connector: " + connectorId + ".";
+    return _this3;
+  }
+  return ConnectorUnsupportedError;
+}( /*#__PURE__*/_wrapNativeSuper(Error));
+var ConnectionRejectedError = /*#__PURE__*/function (_Error4) {
+  _inheritsLoose(ConnectionRejectedError, _Error4);
+  function ConnectionRejectedError() {
+    var _this4;
+    for (var _len4 = arguments.length, params = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
+      params[_key4] = arguments[_key4];
+    }
+    _this4 = _Error4.call.apply(_Error4, [this].concat(params)) || this;
+    _this4.name = 'ConnectionRejectedError';
+    _this4.message = "The activation has been rejected by the provider.";
+    return _this4;
+  }
+  return ConnectionRejectedError;
+}( /*#__PURE__*/_wrapNativeSuper(Error));
+var ConnectorConfigError = /*#__PURE__*/function (_Error5) {
+  _inheritsLoose(ConnectorConfigError, _Error5);
+  function ConnectorConfigError() {
+    var _this5;
+    for (var _len5 = arguments.length, params = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {
+      params[_key5] = arguments[_key5];
+    }
+    _this5 = _Error5.call.apply(_Error5, [this].concat(params)) || this;
+    _this5.name = 'ConnectorConfigError';
+    return _this5;
+  }
+  return ConnectorConfigError;
+}( /*#__PURE__*/_wrapNativeSuper(Error));
+
+function init() {
+  return _init.apply(this, arguments);
+}
+function _init() {
+  _init = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    var _yield$import, FortmaticConnector;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return new Promise(function (resolve) { resolve(_interopNamespace(require('@web3-react/fortmatic-connector'))); });
+        case 2:
+          _yield$import = _context.sent;
+          FortmaticConnector = _yield$import.FortmaticConnector;
+          return _context.abrupt("return", {
+            web3ReactConnector: function web3ReactConnector(_ref) {
+              var chainId = _ref.chainId,
+                apiKey = _ref.apiKey;
+              if (!apiKey) {
+                throw new ConnectorConfigError('The Fortmatic connector requires apiKey to be set.');
+              }
+              return new FortmaticConnector({
+                apiKey: apiKey,
+                chainId: chainId
+              });
+            }
+          });
+        case 5:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return _init.apply(this, arguments);
+}
+
+function init$1() {
+  return _init$1.apply(this, arguments);
+}
+function _init$1() {
+  _init$1 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    var _yield$import, FrameConnector, UserRejectedRequestError;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return new Promise(function (resolve) { resolve(_interopNamespace(require('@web3-react/frame-connector'))); });
+        case 2:
+          _yield$import = _context.sent;
+          FrameConnector = _yield$import.FrameConnector;
+          UserRejectedRequestError = _yield$import.UserRejectedRequestError;
+          return _context.abrupt("return", {
+            web3ReactConnector: function web3ReactConnector(_ref) {
+              var chainId = _ref.chainId;
+              return new FrameConnector({
+                supportedChainIds: [chainId]
+              });
+            },
+            handleActivationError: function handleActivationError(err) {
+              if (err instanceof UserRejectedRequestError) {
+                return new ConnectionRejectedError();
+              }
+              if (err.message.startsWith('JSON.parse')) {
+                return new Error('There seems to be an issue when trying to connect to Frame.');
+              }
+              return null;
+            }
+          });
+        case 6:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return _init$1.apply(this, arguments);
+}
+
+function init$2() {
+  return _init$2.apply(this, arguments);
+}
+function _init$2() {
+  _init$2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    var _yield$import, InjectedConnector, UserRejectedRequestError;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return new Promise(function (resolve) { resolve(_interopNamespace(require('@web3-react/injected-connector'))); });
+        case 2:
+          _yield$import = _context.sent;
+          InjectedConnector = _yield$import.InjectedConnector;
+          UserRejectedRequestError = _yield$import.UserRejectedRequestError;
+          return _context.abrupt("return", {
+            web3ReactConnector: function web3ReactConnector(_ref) {
+              var chainId = _ref.chainId;
+              return new InjectedConnector({
+                supportedChainIds: chainId
+              });
+            },
+            handleActivationError: function handleActivationError(err) {
+              return err instanceof UserRejectedRequestError ? new ConnectionRejectedError() : null;
+            }
+          });
+        case 6:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return _init$2.apply(this, arguments);
+}
+
+function init$3() {
+  return _init$3.apply(this, arguments);
+}
+function _init$3() {
+  _init$3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    var _yield$import, PortisConnector;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return new Promise(function (resolve) { resolve(_interopNamespace(require('@web3-react/portis-connector'))); });
+        case 2:
+          _yield$import = _context.sent;
+          PortisConnector = _yield$import.PortisConnector;
+          return _context.abrupt("return", {
+            web3ReactConnector: function web3ReactConnector(_ref) {
+              var chainId = _ref.chainId,
+                dAppId = _ref.dAppId;
+              if (!dAppId) {
+                throw new ConnectorConfigError('The Portis connector requires dAppId to be set.');
+              }
+              return new PortisConnector({
+                dAppId: dAppId,
+                networks: chainId
+              });
+            }
+          });
+        case 5:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return _init$3.apply(this, arguments);
+}
+
+function init$4() {
+  return _init$4.apply(this, arguments);
+}
+function _init$4() {
+  _init$4 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    var _yield$import, ProvidedConnector, UserRejectedRequestError;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return new Promise(function (resolve) { resolve(_interopNamespace(require('@aragon/provided-connector'))); });
+        case 2:
+          _yield$import = _context.sent;
+          ProvidedConnector = _yield$import.ProvidedConnector;
+          UserRejectedRequestError = _yield$import.UserRejectedRequestError;
+          return _context.abrupt("return", {
+            web3ReactConnector: function web3ReactConnector(_ref) {
+              var chainId = _ref.chainId,
+                provider = _ref.provider;
+              return new ProvidedConnector({
+                provider: provider,
+                supportedChainIds: chainId
+              });
+            },
+            handleActivationError: function handleActivationError(err) {
+              return err instanceof UserRejectedRequestError ? new ConnectionRejectedError() : null;
+            }
+          });
+        case 6:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return _init$4.apply(this, arguments);
+}
+
+function init$5() {
+  return _init$5.apply(this, arguments);
+}
+function _init$5() {
+  _init$5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    var _yield$import, TorusConnector;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return new Promise(function (resolve) { resolve(_interopNamespace(require('@web3-react/torus-connector'))); });
+        case 2:
+          _yield$import = _context.sent;
+          TorusConnector = _yield$import.TorusConnector;
+          return _context.abrupt("return", {
+            web3ReactConnector: function web3ReactConnector(_ref) {
+              var chainId = _ref.chainId,
+                initOptions = _ref.initOptions,
+                constructorOptions = _ref.constructorOptions;
+              return new TorusConnector({
+                chainId: chainId,
+                constructorOptions: constructorOptions,
+                initOptions: initOptions
+              });
+            }
+          });
+        case 5:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return _init$5.apply(this, arguments);
+}
+
+function init$6() {
+  return _init$6.apply(this, arguments);
+}
+function _init$6() {
+  _init$6 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    var _yield$import, UserRejectedRequestError, WalletConnectConnector;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return new Promise(function (resolve) { resolve(_interopNamespace(require('@web3-react/walletconnect-connector'))); });
+        case 2:
+          _yield$import = _context.sent;
+          UserRejectedRequestError = _yield$import.UserRejectedRequestError;
+          WalletConnectConnector = _yield$import.WalletConnectConnector;
+          return _context.abrupt("return", {
+            web3ReactConnector: function web3ReactConnector(_ref) {
+              var rpc = _ref.rpc,
+                bridge = _ref.bridge,
+                pollingInterval = _ref.pollingInterval;
+              if (!rpc) {
+                throw new ConnectorConfigError('The WalletConnect connector requires rpcUrl to be set.');
+              }
+              Object.values(rpc).forEach(function (url) {
+                if (!/^https?:\/\//.test(url)) {
+                  throw new ConnectorConfigError('The WalletConnect connector requires rpcUrl to be an HTTP URL.');
+                }
+                return;
+              });
+              return new WalletConnectConnector({
+                bridge: bridge,
+                pollingInterval: pollingInterval,
+                qrcode: true,
+                rpc: rpc
+              });
+            },
+            handleActivationError: function handleActivationError(err) {
+              return err instanceof UserRejectedRequestError ? new ConnectionRejectedError() : null;
+            }
+          });
+        case 6:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return _init$6.apply(this, arguments);
+}
+
+function createCommonjsModule(fn, module) {
+	return module = { exports: {} }, fn(module, module.exports), module.exports;
+}
+
+var runtime_1 = createCommonjsModule(function (module) {
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var runtime = (function (exports) {
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; };
+  var undefined$1; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function define(obj, key, value) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+    return obj[key];
+  }
+  try {
+    // IE 8 has a broken Object.defineProperty that only works on DOM objects.
+    define({}, "");
+  } catch (err) {
+    define = function(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) });
+
+    return generator;
+  }
+  exports.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  define(IteratorPrototype, iteratorSymbol, function () {
+    return this;
+  });
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = GeneratorFunctionPrototype;
+  defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: true });
+  defineProperty(
+    GeneratorFunctionPrototype,
+    "constructor",
+    { value: GeneratorFunction, configurable: true }
+  );
+  GeneratorFunction.displayName = define(
+    GeneratorFunctionPrototype,
+    toStringTagSymbol,
+    "GeneratorFunction"
+  );
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      define(prototype, method, function(arg) {
+        return this._invoke(method, arg);
+      });
+    });
+  }
+
+  exports.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  exports.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      define(genFun, toStringTagSymbol, "GeneratorFunction");
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  exports.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return PromiseImpl.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return PromiseImpl.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new PromiseImpl(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    defineProperty(this, "_invoke", { value: enqueue });
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
+    return this;
+  });
+  exports.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  exports.async = function(innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    if (PromiseImpl === void 0) PromiseImpl = Promise;
+
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList),
+      PromiseImpl
+    );
+
+    return exports.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var methodName = context.method;
+    var method = delegate.iterator[methodName];
+    if (method === undefined$1) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method, or a missing .next mehtod, always terminate the
+      // yield* loop.
+      context.delegate = null;
+
+      // Note: ["return"] must be used for ES3 parsing compatibility.
+      if (methodName === "throw" && delegate.iterator["return"]) {
+        // If the delegate iterator has a return method, give it a
+        // chance to clean up.
+        context.method = "return";
+        context.arg = undefined$1;
+        maybeInvokeDelegate(delegate, context);
+
+        if (context.method === "throw") {
+          // If maybeInvokeDelegate(context) changed context.method from
+          // "return" to "throw", let that override the TypeError below.
+          return ContinueSentinel;
+        }
+      }
+      if (methodName !== "return") {
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a '" + methodName + "' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined$1;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  define(Gp, toStringTagSymbol, "Generator");
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  define(Gp, iteratorSymbol, function() {
+    return this;
+  });
+
+  define(Gp, "toString", function() {
+    return "[object Generator]";
+  });
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function(val) {
+    var object = Object(val);
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined$1;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  exports.values = values;
+
+  function doneResult() {
+    return { value: undefined$1, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined$1;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined$1;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined$1;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined$1;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined$1;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+
+  // Regardless of whether this script is executing as a CommonJS module
+  // or not, return the runtime object so that we can declare the variable
+  // regeneratorRuntime in the outer scope, which allows this module to be
+  // injected easily by `bin/regenerator --include-runtime script.js`.
+  return exports;
+
+}(
+  // If this script is executing as a CommonJS module, use module.exports
+  // as the regeneratorRuntime namespace. Otherwise create a new empty
+  // object. Either way, the resulting object will be used to initialize
+  // the regeneratorRuntime variable at the top of this file.
+   module.exports 
+));
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  // This module should not be running in strict mode, so the above
+  // assignment should always work unless something is misconfigured. Just
+  // in case runtime.js accidentally runs in strict mode, in modern engines
+  // we can explicitly access globalThis. In older engines we can escape
+  // strict mode using a global Function call. This could conceivably fail
+  // if a Content Security Policy forbids using Function, but in that case
+  // the proper solution is to fix the accidental strict mode problem. If
+  // you've misconfigured your bundler to force strict mode and applied a
+  // CSP to forbid Function, and you're not willing to fix either of those
+  // problems, please detail your unique predicament in a GitHub issue.
+  if (typeof globalThis === "object") {
+    globalThis.regeneratorRuntime = runtime;
+  } else {
+    Function("r", "regeneratorRuntime = r")(runtime);
+  }
+}
+});
+
+function init$7() {
+  return _init$7.apply(this, arguments);
+}
+function _init$7() {
+  _init$7 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    var _yield$import, WalletLinkConnector;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return new Promise(function (resolve) { resolve(_interopNamespace(require('@web3-react/walletlink-connector'))); });
+        case 2:
+          _yield$import = _context.sent;
+          WalletLinkConnector = _yield$import.WalletLinkConnector;
+          return _context.abrupt("return", {
+            web3ReactConnector: function web3ReactConnector(_ref) {
+              var chainId = _ref.chainId,
+                url = _ref.url,
+                appName = _ref.appName,
+                appLogoUrl = _ref.appLogoUrl;
+              if (chainId !== 1) {
+                throw new ConnectorConfigError('The WalletLink connector requires chainId to be 1.');
+              }
+              if (!/^https?:\/\//.test(url)) {
+                throw new ConnectorConfigError('The WalletLink connector requires url to be an HTTP URL.');
+              }
+              return new WalletLinkConnector({
+                url: url,
+                appName: appName,
+                appLogoUrl: appLogoUrl
+              });
+            }
+          });
+        case 5:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return _init$7.apply(this, arguments);
+}
+
+// NOTE: The ledger live path specify which chain and which account is used
+// on the hardware wallet. This should eventually be made dynamic.
+var LEDGER_LIVE_PATH = "m/44'/60'/0'/0";
+var POLLING_INTERVAL = 12000;
+function init$8() {
+  return _init$8.apply(this, arguments);
+}
+function _init$8() {
+  _init$8 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    var _yield$import, LedgerConnector;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return new Promise(function (resolve) { resolve(_interopNamespace(require('@web3-react/ledger-connector'))); });
+        case 2:
+          _yield$import = _context.sent;
+          LedgerConnector = _yield$import.LedgerConnector;
+          return _context.abrupt("return", {
+            web3ReactConnector: function web3ReactConnector(_ref) {
+              var chainId = _ref.chainId,
+                url = _ref.url;
+              if (!url) {
+                throw new ConnectorConfigError('The Ledger connector requires url to be set.');
+              }
+              return new LedgerConnector({
+                url: url,
+                chainId: chainId,
+                pollingInterval: POLLING_INTERVAL,
+                baseDerivationPath: LEDGER_LIVE_PATH
+              });
+            }
+          });
+        case 5:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return _init$8.apply(this, arguments);
+}
+
+function getConnectors(initsOrConfigs) {
+  if (initsOrConfigs === void 0) {
+    initsOrConfigs = {};
+  }
+  var connectors = {
+    fortmatic: [init, null],
+    frame: [init$1, null],
+    injected: [init$2, null],
+    portis: [init$3, null],
+    provided: [init$4, null],
+    torus: [init$5, null],
+    walletconnect: [init$6, null],
+    walletlink: [init$7, null],
+    ledger: [init$8, null]
+  };
+  for (var _i = 0, _Object$entries = Object.entries(initsOrConfigs); _i < _Object$entries.length; _i++) {
+    var _Object$entries$_i = _Object$entries[_i],
+      id = _Object$entries$_i[0],
+      initOrConfig = _Object$entries$_i[1];
+    // If initOrConfig is a function, it is an initializer.
+    if (typeof initOrConfig === 'function') {
+      connectors[id] = [initOrConfig, null];
+      continue;
+    }
+    // Otherwise it is a config
+    if (connectors[id]) {
+      connectors[id][1] = initOrConfig;
+    }
+  }
+  return connectors;
+}
+
+var NOVA = {
+  name: 'NOVA',
+  symbol: 'NOVA',
+  decimals: 18
+};
+var ETH = {
+  name: 'Ether',
+  symbol: 'ETH',
+  decimals: 18
+};
+var MATIC = {
+  name: 'Matic Token',
+  symbol: 'MATIC',
+  decimals: 18
+};
+var AVAX = {
+  name: 'Avax',
+  symbol: 'AVAX',
+  decimals: 9
+};
+var ONE = {
+  name: 'ONE Token',
+  symbol: 'ONE',
+  decimals: 18
+};
+var XDAI = {
+  name: 'xDAI',
+  symbol: 'xDAI',
+  decimals: 18
+};
+var BNB = {
+  name: 'Binance Token',
+  symbol: 'BNB',
+  decimals: 18
+};
+var TT = {
+  name: 'Thunder Token',
+  symbol: 'TT',
+  decimals: 18
+};
+var CELO = {
+  name: 'Celo',
+  symbol: 'CELO',
+  decimals: 18
+};
+var METIS = {
+  name: 'METIS',
+  symbol: 'METIS',
+  decimals: 18
+};
+var FTM = {
+  name: 'FTM',
+  symbol: 'FTM',
+  decimals: 18
+};
+var DEV = {
+  name: 'DEV',
+  symbol: 'DEV',
+  decimals: 18
+};
+var MOVR = {
+  name: 'Moonriver',
+  symbol: 'MOVR',
+  decimals: 18
+};
+var GLMR = {
+  name: 'Glimmer',
+  symbol: 'GLMR',
+  decimals: 18
+};
+var HECO = {
+  name: 'HECO',
+  symbol: 'HT',
+  decimals: 18
+};
+var EVMOS = {
+  name: 'EVMOS',
+  symbol: 'EVMOS',
+  decimals: 18
+};
+var CHAIN_INFORMATION = /*#__PURE__*/new Map([[350, {
+  id: 350,
+  nativeCurrency: NOVA,
+  type: 'main',
+  fullName: 'NOVA Mainnet Network',
+  shortName: 'NOVA',
+  explorerUrl: "https://explorer.novatoken.fr",
+  testnet: false
+}], [1, {
+  id: 1,
+  nativeCurrency: ETH,
+  type: 'main',
+  fullName: 'Ethereum Mainnet',
+  shortName: 'Ethereum',
+  explorerUrl: "https://etherscan.io",
+  testnet: false
+}], [3, {
+  id: 3,
+  nativeCurrency: ETH,
+  type: 'ropsten',
+  fullName: 'Ropsten Testnet',
+  shortName: 'Ropsten',
+  explorerUrl: "https://ropsten.etherscan.io",
+  testnet: true
+}], [4, {
+  id: 4,
+  nativeCurrency: ETH,
+  type: 'rinkeby',
+  fullName: 'Rinkeby Testnet',
+  shortName: 'Rinkeby',
+  explorerUrl: "https://rinkeby.etherscan.io",
+  testnet: true
+}], [5, {
+  id: 5,
+  nativeCurrency: ETH,
+  type: 'goerli',
+  fullName: 'Goerli Testnet',
+  shortName: 'Goerli',
+  explorerUrl: "https://goerli.etherscan.io",
+  testnet: true
+}], [42, {
+  id: 42,
+  nativeCurrency: ETH,
+  type: 'kovan',
+  fullName: 'Kovan Testnet',
+  shortName: 'Kovan',
+  explorerUrl: "https://kovan.etherscan.io",
+  testnet: true
+}], [43112, {
+  id: 43112,
+  nativeCurrency: AVAX,
+  type: 'avalocal',
+  shortName: 'Avalanche Local',
+  fullName: 'Avalanche Local',
+  testnet: true
+}], [43113, {
+  id: 43113,
+  nativeCurrency: AVAX,
+  type: 'fuji',
+  fullName: 'Avalanche Fuji',
+  shortName: 'Fuji',
+  explorerUrl: 'https://testnet.snowtrace.io/',
+  testnet: true
+}], [43114, {
+  id: 43114,
+  nativeCurrency: AVAX,
+  type: 'avalanche',
+  fullName: 'Avalanche Mainnet',
+  shortName: 'Avalanche',
+  explorerUrl: 'https://snowtrace.io/',
+  testnet: false
+}], [100, {
+  id: 100,
+  nativeCurrency: XDAI,
+  type: 'xdai',
+  fullName: 'xDAI',
+  shortName: 'xDAI',
+  explorerUrl: 'https://blockscout.com/xdai/mainnet/',
+  testnet: false
+}], [137, {
+  id: 137,
+  nativeCurrency: MATIC,
+  type: 'matic',
+  fullName: 'Polygon Mainnet',
+  shortName: 'Polygon',
+  explorerUrl: "https://polygonscan.com",
+  testnet: false
+}], [80001, {
+  id: 80001,
+  nativeCurrency: MATIC,
+  type: 'mumbai',
+  fullName: 'Mumbai Testnet',
+  shortName: 'Mumbai',
+  explorerUrl: "https://mumbai.polygonscan.com",
+  testnet: true
+}], [250, {
+  id: 250,
+  nativeCurrency: FTM,
+  type: 'fantom',
+  fullName: 'Fantom Opera Mainnet',
+  shortName: 'FTM',
+  explorerUrl: "https://ftmscan.com/",
+  testnet: false
+}], [4002, {
+  id: 4002,
+  nativeCurrency: FTM,
+  type: 'fantom',
+  fullName: 'Fantom Opera Testnet',
+  shortName: 'FTM',
+  explorerUrl: "https://testnet.ftmscan.com/",
+  testnet: true
+}], [9000, {
+  id: 9000,
+  nativeCurrency: EVMOS,
+  type: 'evmos',
+  fullName: 'Evmos Testnet',
+  shortName: 'EVMOS',
+  explorerUrl: "https://eth.bd.evmos.dev:8545",
+  testnet: true
+}], [9001, {
+  id: 9001,
+  nativeCurrency: EVMOS,
+  type: 'evmos',
+  fullName: 'Evmos mainnet',
+  shortName: 'EVMOS',
+  explorerUrl: "https://eth.bd.evmos.org:8545",
+  testnet: false
+}], [1666600000, {
+  id: 1666600000,
+  nativeCurrency: ONE,
+  type: 'harmony',
+  fullName: 'Harmony ONE',
+  shortName: 'Harmony',
+  explorerUrl: "https://explorer.harmony.one/",
+  testnet: false
+}], [1666700000, {
+  id: 1666700000,
+  nativeCurrency: ONE,
+  type: 'harmonyTest',
+  fullName: 'Harmony ONE Testnet',
+  shortName: 'Harmony Testnet',
+  explorerUrl: "https://explorer.testnet.harmony.one/",
+  testnet: true
+}], [56, {
+  id: 56,
+  nativeCurrency: BNB,
+  type: 'bsc',
+  fullName: 'Binance Smart Chain',
+  shortName: 'BSC',
+  explorerUrl: "https://bscscan.com/",
+  testnet: false
+}], [97, {
+  id: 97,
+  nativeCurrency: BNB,
+  type: 'bscTest',
+  fullName: 'Binance Smart Chain Testnet',
+  shortName: 'BSC Testnet',
+  explorerUrl: "https://testnet.bscscan.com/",
+  testnet: true
+}], [108, {
+  id: 108,
+  nativeCurrency: TT,
+  type: 'thundercore',
+  fullName: 'ThunderCore Mainnet',
+  shortName: 'ThunderCore',
+  explorerUrl: "https://scan.thundercore.com/",
+  testnet: false
+}], [18, {
+  id: 18,
+  nativeCurrency: TT,
+  type: 'thundercoreTest',
+  fullName: 'ThunderCore Testnet',
+  shortName: 'ThunderCore Testnet',
+  explorerUrl: "https://scan-testnet.thundercore.com/",
+  testnet: true
+}], [421611, {
+  id: 421611,
+  nativeCurrency: ETH,
+  type: 'arbitrumTest',
+  fullName: 'Arbitrum Testnet',
+  shortName: 'Arbitrum Testnet',
+  explorerUrl: 'https://testnet.arbiscan.io/',
+  testnet: true
+}], [42161, {
+  id: 42161,
+  nativeCurrency: ETH,
+  type: 'arbitrum',
+  fullName: 'Arbitrum Mainnet',
+  shortName: 'Arbitrum',
+  explorerUrl: 'https://arbiscan.io/',
+  testnet: false
+}], [42220, {
+  id: 42220,
+  nativeCurrency: CELO,
+  type: 'celo',
+  fullName: 'Celo (Mainnet)',
+  shortName: 'Celo',
+  explorerUrl: 'https://explorer.celo.org/',
+  testnet: false
+}], [44787, {
+  id: 44787,
+  nativeCurrency: CELO,
+  type: 'celoTest',
+  fullName: 'Celo (Alfajores Testnet)',
+  shortName: 'Alfajores',
+  explorerUrl: 'https://alfajores-blockscout.celo-testnet.org/',
+  testnet: true
+}], [588, {
+  id: 588,
+  nativeCurrency: METIS,
+  type: 'stardust',
+  fullName: 'Metis Stardust Testnet',
+  shortName: 'Stardust',
+  explorerUrl: 'https://stardust-explorer.metis.io/',
+  testnet: true
+}], [1088, {
+  id: 1088,
+  nativeCurrency: METIS,
+  type: 'andromeda',
+  fullName: 'Metis Andromeda',
+  shortName: 'Andromeda',
+  explorerUrl: 'https://andromeda-explorer.metis.io/',
+  testnet: false
+}], [1313161555, {
+  id: 1313161555,
+  nativeCurrency: ETH,
+  type: 'aurora',
+  fullName: 'Aurora Testnet',
+  shortName: 'AuroraTest',
+  explorerUrl: 'https://explorer.testnet.aurora.dev/',
+  testnet: true
+}], [1313161554, {
+  id: 1313161554,
+  nativeCurrency: ETH,
+  type: 'aurora',
+  fullName: 'Aurora Mainnet',
+  shortName: 'Aurora',
+  explorerUrl: 'https://explorer.mainnet.aurora.dev/',
+  testnet: false
+}], [1287, {
+  id: 1287,
+  nativeCurrency: DEV,
+  type: 'moonbase',
+  fullName: 'moonbase',
+  shortName: 'Moonbase Alphanet',
+  explorerUrl: 'https://moonbase.moonscan.io/',
+  testnet: true
+}], [1285, {
+  id: 1285,
+  nativeCurrency: MOVR,
+  type: 'moonriver',
+  fullName: 'Moonriver',
+  shortName: 'Moonriver',
+  explorerUrl: 'https://moonriver.moonscan.io/',
+  testnet: false
+}], [1284, {
+  id: 1284,
+  nativeCurrency: GLMR,
+  type: 'moonbeam',
+  fullName: 'Moonbeam',
+  shortName: 'Moonbeam',
+  explorerUrl: 'https://moonbeam.moonscan.io/',
+  testnet: false
+}], [1337, {
+  id: 1337,
+  type: 'local',
+  testnet: true
+}], [5777, {
+  id: 5777,
+  type: 'ganache',
+  testnet: true
+}], [128, {
+  id: 128,
+  nativeCurrency: HECO,
+  type: 'main',
+  fullName: 'HECO Mainnet',
+  shortName: 'HECO',
+  explorerUrl: "https://hecoscan.xyz/",
+  testnet: false
+}], [42161, {
+  id: 42161,
+  nativeCurrency: ETH,
+  type: 'main',
+  fullName: 'Arbitrum',
+  shortName: 'Arbitrum',
+  explorerUrl: "https://arbiscan.io/",
+  testnet: false
+}], [421613, {
+  id: 421613,
+  nativeCurrency: ETH,
+  type: 'testnet',
+  fullName: 'Arbitrum Goerli Testnet',
+  shortName: 'Arbitrum',
+  explorerUrl: "https://goerli.arbiscan.io/",
+  testnet: true
+}], [11155111, {
+  id: 11155111,
+  nativeCurrency: ETH,
+  type: 'testnet',
+  fullName: 'Sepolia Testnet',
+  shortName: 'Sepolia',
+  explorerUrl: "https://sepolia.etherscan.io/",
+  testnet: true
+}]]);
+/**
+ * This method checks whether a particular chain id is known.
+ *
+ * @param {number} chainId chain id to check
+ * @returns {boolean} true if chain is known
+ */
+function isKnownChain(chainId) {
+  return CHAIN_INFORMATION.has(chainId);
+}
+/**
+ *
+ * @param {number} chainId chain id to retrieve information for
+ * @throws {ChainUnknownError} if chain is unknown
+ * @returns {boolean} information for specified chain
+ */
+function getChainInformation(chainId) {
+  var chainInfo = CHAIN_INFORMATION.get(chainId);
+  if (!chainInfo) throw new ChainUnknownError("Unknown chain id: " + chainId);
+  return chainInfo;
+}
+/**
+ * This is a getter method to returns the chain ids of all known chains.
+ *
+ * @returns {number[]} array of chain Ids
+ */
+function getKnownChainsIds() {
+  return Array.from(CHAIN_INFORMATION.keys());
+}
+/**
+ * This is a getter method to return all information available for each known chain.
+ *
+ * @returns {ChainInformation | ChainType[]} An array containing information for
+ * each known chain
+ */
+function getKnownChainInformation() {
+  return Array.from(CHAIN_INFORMATION.values());
+}
+function getDefaultChainId() {
+  return 1;
+}
+
+var chains = {
+  __proto__: null,
+  isKnownChain: isKnownChain,
+  getChainInformation: getChainInformation,
+  getKnownChainsIds: getKnownChainsIds,
+  getKnownChainInformation: getKnownChainInformation,
+  getDefaultChainId: getDefaultChainId
+};
+
+function isUnwrappedRpcResult(response) {
+  return typeof response === 'object' && response !== null && 'jsonrpc' in response;
+}
+var EXPLORER_URL_TYPES = /*#__PURE__*/new Map([['block', 'block'], ['transaction', 'tx'], ['address', 'address'], ['token', 'token']]);
+var blockExplorerUrl = function blockExplorerUrl(type, value, chainId) {
+  if (!getKnownChainsIds().includes(chainId)) {
+    return '';
+  }
+  if (!EXPLORER_URL_TYPES.has(type)) {
+    throw new Error('type not supported.');
+  }
+  var domain = getChainInformation(chainId).explorerUrl;
+  var typePart = EXPLORER_URL_TYPES.get(type);
+  return domain + "/" + typePart + "/" + value;
+};
+function rpcResult(response) {
+  // Some providers don’t wrap the response
+  if (isUnwrappedRpcResult(response)) {
+    if (response.error) {
+      throw new Error(response.error);
+    }
+    return response.result || null;
+  }
+  return response || null;
+}
+function ethereumRequest(_x, _x2, _x3) {
+  return _ethereumRequest.apply(this, arguments);
+}
+function _ethereumRequest() {
+  _ethereumRequest = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(ethereum, method, params) {
+    return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+      while (1) switch (_context2.prev = _context2.next) {
+        case 0:
+          if (!ethereum.request) {
+            _context2.next = 2;
+            break;
+          }
+          return _context2.abrupt("return", ethereum.request({
+            method: method,
+            params: params
+          }).then(rpcResult));
+        case 2:
+          if (!(ethereum.sendAsync && ethereum.selectedAddress)) {
+            _context2.next = 4;
+            break;
+          }
+          return _context2.abrupt("return", new Promise(function (resolve, reject) {
+            ethereum.sendAsync({
+              method: method,
+              params: params,
+              from: ethereum.selectedAddress,
+              jsonrpc: '2.0',
+              id: 0
+            }, function (err, result) {
+              if (err) {
+                reject(err);
+              } else {
+                resolve(result);
+              }
+            });
+          }).then(rpcResult));
+        case 4:
+          if (!ethereum.send) {
+            _context2.next = 6;
+            break;
+          }
+          return _context2.abrupt("return", ethereum.send(method, params).then(rpcResult));
+        case 6:
+          throw new Error('The Ethereum provider doesn’t seem to provide a request method.');
+        case 7:
+        case "end":
+          return _context2.stop();
+      }
+    }, _callee2);
+  }));
+  return _ethereumRequest.apply(this, arguments);
+}
+function getAccountIsContract(_x4, _x5) {
+  return _getAccountIsContract.apply(this, arguments);
+}
+function _getAccountIsContract() {
+  _getAccountIsContract = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(ethereum, account) {
+    var code;
+    return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+      while (1) switch (_context3.prev = _context3.next) {
+        case 0:
+          _context3.prev = 0;
+          _context3.next = 3;
+          return ethereumRequest(ethereum, 'eth_getCode', [account]);
+        case 3:
+          code = _context3.sent;
+          return _context3.abrupt("return", code !== '0x');
+        case 7:
+          _context3.prev = 7;
+          _context3.t0 = _context3["catch"](0);
+          return _context3.abrupt("return", false);
+        case 10:
+        case "end":
+          return _context3.stop();
+      }
+    }, _callee3, null, [[0, 7]]);
+  }));
+  return _getAccountIsContract.apply(this, arguments);
+}
+function getAccountBalance(_x6, _x7) {
+  return _getAccountBalance.apply(this, arguments);
+}
+function _getAccountBalance() {
+  _getAccountBalance = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(ethereum, account) {
+    return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+      while (1) switch (_context4.prev = _context4.next) {
+        case 0:
+          return _context4.abrupt("return", ethereumRequest(ethereum, 'eth_getBalance', [account, 'latest']));
+        case 1:
+        case "end":
+          return _context4.stop();
+      }
+    }, _callee4);
+  }));
+  return _getAccountBalance.apply(this, arguments);
+}
+function getBlockNumber(_x8) {
+  return _getBlockNumber.apply(this, arguments);
+}
+function _getBlockNumber() {
+  _getBlockNumber = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(ethereum) {
+    return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+      while (1) switch (_context5.prev = _context5.next) {
+        case 0:
+          return _context5.abrupt("return", ethereumRequest(ethereum, 'eth_blockNumber', []));
+        case 1:
+        case "end":
+          return _context5.stop();
+      }
+    }, _callee5);
+  }));
+  return _getBlockNumber.apply(this, arguments);
+}
+function pollEvery(fn, delay) {
+  var timer; // can be TimeOut (Node) or number (web)
+  var stop = false;
+  var poll = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(request, onResult) {
+      var result;
+      return _regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return request();
+          case 2:
+            result = _context.sent;
+            if (!stop) {
+              onResult(result);
+              timer = setTimeout(poll.bind(null, request, onResult), delay);
+            }
+          case 4:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function poll(_x9, _x10) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+  return function () {
+    var _fn = fn.apply(void 0, arguments),
+      request = _fn.request,
+      onResult = _fn.onResult;
+    stop = false;
+    poll(request, onResult);
+    return function () {
+      stop = true;
+      clearTimeout(timer);
+    };
+  };
+}
+var ACCOUNT_KEY = 'LAST_ACTIVE_ACCOUNT';
+var CONNECTOR_KEY = 'LAST_WALLET_CONNECTOR';
+var setLastActiveAccount = function setLastActiveAccount(account) {
+  var _localStorage;
+  (_localStorage = localStorage) == null ? void 0 : _localStorage.setItem(ACCOUNT_KEY, account);
+};
+var clearLastActiveAccount = function clearLastActiveAccount() {
+  var _localStorage2;
+  (_localStorage2 = localStorage) == null ? void 0 : _localStorage2.removeItem(ACCOUNT_KEY);
+};
+var getLastActiveAccount = function getLastActiveAccount() {
+  var _localStorage3;
+  return (_localStorage3 = localStorage) == null ? void 0 : _localStorage3.getItem(ACCOUNT_KEY);
+};
+var setLastConnector = function setLastConnector(connector) {
+  var _localStorage4;
+  (_localStorage4 = localStorage) == null ? void 0 : _localStorage4.setItem(CONNECTOR_KEY, connector);
+};
+var getLastConnector = function getLastConnector() {
+  var _localStorage5;
+  return (_localStorage5 = localStorage) == null ? void 0 : _localStorage5.getItem(CONNECTOR_KEY);
+};
+
+const img = require('./Cipher.png');
+
+const img$1 = require('./Fortmatic.svg');
+
+const img$2 = require('./Frame.png');
+
+const img$3 = require('./Metamask.png');
+
+const img$4 = require('./Portis.svg');
+
+const img$5 = require('./Status.png');
+
+const img$6 = require('./wallet.svg');
+
+const img$7 = require('./walletconnect.png');
+
+function isElectron() {
+  // See https://github.com/electron/electron/issues/2288
+  return typeof navigator === 'object' && typeof navigator.userAgent === 'string' && navigator.userAgent.indexOf('Electron') >= 0;
+}
+// See the corresponding prop type, EthereumProviderType, in prop-types.js.
+var PROVIDERS = /*#__PURE__*/new Map( /*#__PURE__*/[{
+  id: 'frame',
+  name: 'Frame',
+  type: 'Desktop',
+  image: img$2,
+  strings: {
+    'your Ethereum wallet': 'Frame'
+  }
+}, {
+  id: 'metamask',
+  name: 'Metamask',
+  type: 'Desktop',
+  image: img$3,
+  strings: {
+    'your Ethereum wallet': 'Metamask'
+  }
+}, {
+  id: 'status',
+  name: 'Status',
+  type: 'Mobile',
+  image: img$5,
+  strings: {
+    'your Ethereum wallet': 'Status'
+  }
+}, {
+  id: 'cipher',
+  name: 'Cipher',
+  type: 'Mobile',
+  image: img,
+  strings: {
+    'your Ethereum wallet': 'Cipher'
+  }
+}, {
+  id: 'fortmatic',
+  name: 'Fortmatic',
+  type: 'Any',
+  image: img$1,
+  strings: {
+    'your Ethereum wallet': 'Fortmatic'
+  }
+}, {
+  id: 'portis',
+  name: 'Portis',
+  type: 'Any',
+  image: img$4,
+  strings: {
+    'your Ethereum wallet': 'Portis'
+  }
+}, {
+  id: 'walletconnect',
+  name: 'WalletConnect',
+  type: 'Any',
+  image: img$7,
+  strings: {
+    'your Ethereum wallet': 'WalletConnect'
+  }
+}, {
+  id: 'unknown',
+  name: 'Unknown',
+  type: 'Desktop',
+  image: img$6,
+  strings: {
+    'your Ethereum wallet': 'your wallet'
+  }
+}].map(function (provider) {
+  return [provider.id, provider];
+}));
+// Get a providers object for a given ID.
+function getProvider(providerId) {
+  return PROVIDERS.get(providerId);
+}
+// Get a string that depends on the current Ethereum provider.
+// The default string is used as an identifier (à la gettext).
+function getProviderString(string, providerId) {
+  if (providerId === void 0) {
+    providerId = 'unknown';
+  }
+  var provider = getProvider(providerId);
+  return provider && provider.strings[string] || string;
+}
+// Get an identifier for the provider, if it can be detected.
+function identifyProvider(provider) {
+  if (provider && isElectron()) {
+    return 'frame';
+  }
+  if (provider && provider.isMetaMask) {
+    return 'metamask';
+  }
+  return 'unknown';
+}
+// Get a provider from its useWallet() identifier.
+function getProviderFromUseWalletId(id) {
+  if (id === 'injected' || id === 'provided') {
+    return getProvider(identifyProvider(window.ethereum)) || getProvider('unknown');
+  }
+  return getProvider(id) || getProvider('unknown');
+}
+
+// Only watch block numbers, and return functions allowing to subscribe to it.
+function useWatchBlockNumber(_ref) {
+  var ethereum = _ref.ethereum,
+    pollBlockNumberInterval = _ref.pollBlockNumberInterval;
+  var lastBlockNumber = React.useRef(null);
+  // Using listeners lets useWallet() decide if it wants to expose the block
+  // number, which implies to re-render whenever the block number updates.
+  var blockNumberListeners = React.useRef(new Set());
+  var addBlockNumberListener = React.useCallback(function (cb) {
+    if (blockNumberListeners.current.has(cb)) {
+      return;
+    }
+    // Immediately send the block number to the new listener
+    cb(lastBlockNumber.current);
+    // Add the listener
+    blockNumberListeners.current.add(cb);
+  }, []);
+  var removeBlockNumberListener = React.useCallback(function (cb) {
+    blockNumberListeners.current["delete"](cb);
+  }, []);
+  // Update the block number and broadcast it to the listeners
+  var updateBlockNumber = React.useCallback(function (blockNumber) {
+    if (lastBlockNumber.current === blockNumber) {
+      return;
+    }
+    lastBlockNumber.current = blockNumber;
+    blockNumberListeners.current.forEach(function (cb) {
+      return cb(blockNumber);
+    });
+  }, []);
+  React.useEffect(function () {
+    if (!ethereum) {
+      updateBlockNumber(null);
+      return;
+    }
+    var cancel = false;
+    var pollBlockNumber = pollEvery(function () {
+      return {
+        request: function request() {
+          return getBlockNumber(ethereum);
+        },
+        onResult: function onResult(latestBlockNumber) {
+          if (!cancel) {
+            updateBlockNumber(latestBlockNumber === null ? null : JSBI.BigInt(latestBlockNumber).toString());
+          }
+        }
+      };
+    }, pollBlockNumberInterval);
+    var stopPollingBlockNumber = pollBlockNumber();
+    return function () {
+      cancel = true;
+      stopPollingBlockNumber();
+    };
+  }, [ethereum, pollBlockNumberInterval, updateBlockNumber]);
+  return {
+    addBlockNumberListener: addBlockNumberListener,
+    removeBlockNumberListener: removeBlockNumberListener
+  };
+}
+
+var NO_BALANCE = '-1';
+function useWalletBalance(_ref) {
+  var account = _ref.account,
+    ethereum = _ref.ethereum,
+    pollBalanceInterval = _ref.pollBalanceInterval;
+  var _useState = React.useState(NO_BALANCE),
+    balance = _useState[0],
+    setBalance = _useState[1];
+  React.useEffect(function () {
+    if (!account || !ethereum) {
+      return;
+    }
+    var cancel = false;
+    // Poll wallet balance
+    var pollBalance = pollEvery(function (account, ethereum, onUpdate) {
+      var lastBalance = NO_BALANCE;
+      return {
+        request: function request() {
+          return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+            return _regeneratorRuntime().wrap(function _callee$(_context) {
+              while (1) switch (_context.prev = _context.next) {
+                case 0:
+                  return _context.abrupt("return", getAccountBalance(ethereum, account).then(function (value) {
+                    return value ? JSBI.BigInt(value).toString() : NO_BALANCE;
+                  })["catch"](function () {
+                    return NO_BALANCE;
+                  }));
+                case 1:
+                case "end":
+                  return _context.stop();
+              }
+            }, _callee);
+          }))();
+        },
+        onResult: function onResult(balance) {
+          if (!cancel && balance !== lastBalance) {
+            lastBalance = balance;
+            onUpdate(balance);
+          }
+        }
+      };
+    }, pollBalanceInterval);
+    // start polling balance every x time
+    var stopPollingBalance = pollBalance(account, ethereum, setBalance);
+    return function () {
+      cancel = true;
+      stopPollingBalance();
+      setBalance(NO_BALANCE);
+    };
+  }, [account, ethereum, pollBalanceInterval]);
+  return balance;
+}
+
+var UseWalletContext = /*#__PURE__*/React.createContext(null);
+// CONTEXT CONSUMER ============================================================
+function useWallet() {
+  var walletContext = React.useContext(UseWalletContext);
+  if (walletContext === null) {
+    throw new Error('useWallet() can only be used inside of <UseWalletProvider />, ' + 'please declare it at a higher level.');
+  }
+  var getBlockNumber = useGetBlockNumber();
+  var wallet = walletContext.wallet;
+  return React.useMemo(function () {
+    return _extends({}, wallet, {
+      getBlockNumber: getBlockNumber
+    });
+  }, [getBlockNumber, wallet]);
+}
+function useGetBlockNumber() {
+  var walletContext = React.useContext(UseWalletContext);
+  var _useState = React.useState(null),
+    blockNumber = _useState[0],
+    setBlockNumber = _useState[1];
+  var requestedBlockNumber = React.useRef(false);
+  var getBlockNumber = React.useCallback(function () {
+    if (walletContext === null) {
+      return null;
+    }
+    requestedBlockNumber.current = true;
+    walletContext.addBlockNumberListener(setBlockNumber);
+    return blockNumber;
+  }, [walletContext, blockNumber]);
+  React.useEffect(function () {
+    if (!requestedBlockNumber.current || walletContext === null) {
+      return;
+    }
+    walletContext.addBlockNumberListener(setBlockNumber);
+    return function () {
+      walletContext.removeBlockNumberListener(setBlockNumber);
+    };
+  }, [requestedBlockNumber, walletContext]);
+  return getBlockNumber;
+}
+UseWalletProvider.propTypes = {
+  children: PropTypes.node,
+  connectors: /*#__PURE__*/PropTypes.objectOf(PropTypes.object),
+  autoConnect: PropTypes.bool,
+  pollBalanceInterval: PropTypes.number,
+  pollBlockNumberInterval: PropTypes.number
+};
+UseWalletProvider.defaultProps = {
+  connectors: {},
+  autoConnect: false,
+  pollBalanceInterval: 2000,
+  pollBlockNumberInterval: 5000
+};
+function UseWalletProvider(_ref) {
+  var children = _ref.children,
+    connectorsInitsOrConfigs = _ref.connectors,
+    autoConnect = _ref.autoConnect,
+    pollBalanceInterval = _ref.pollBalanceInterval,
+    pollBlockNumberInterval = _ref.pollBlockNumberInterval;
+  var walletContext = React.useContext(UseWalletContext);
+  if (walletContext !== null) {
+    throw new Error('<UseWalletProvider /> has already been declared.');
+  }
+  var _useState2 = React.useState(null),
+    connector = _useState2[0],
+    setConnector = _useState2[1];
+  var _useState3 = React.useState(null),
+    error = _useState3[0],
+    setError = _useState3[1];
+  var _useState4 = React.useState(null),
+    type = _useState4[0],
+    setType = _useState4[1];
+  var _useState5 = React.useState('disconnected'),
+    status = _useState5[0],
+    setStatus = _useState5[1];
+  var web3ReactContext = core.useWeb3React();
+  var activationId = React.useRef(0);
+  var account = web3ReactContext.account,
+    web3ChainId = web3ReactContext.chainId,
+    ethereum = web3ReactContext.library,
+    web3Error = web3ReactContext.error;
+  var balance = useWalletBalance({
+    account: account,
+    ethereum: ethereum,
+    pollBalanceInterval: pollBalanceInterval
+  });
+  var _useWatchBlockNumber = useWatchBlockNumber({
+      ethereum: ethereum,
+      pollBlockNumberInterval: pollBlockNumberInterval
+    }),
+    addBlockNumberListener = _useWatchBlockNumber.addBlockNumberListener,
+    removeBlockNumberListener = _useWatchBlockNumber.removeBlockNumberListener;
+  // Combine the user-provided connectors with the default ones (see connectors.js).
+  var connectors = React.useMemo(function () {
+    return getConnectors(connectorsInitsOrConfigs);
+  }, [connectorsInitsOrConfigs]);
+  var chainId = React.useMemo(function () {
+    return web3ChainId ? web3ChainId : getDefaultChainId();
+  }, [web3ChainId]);
+  var reset = React.useCallback(function () {
+    if (web3ReactContext.active) {
+      web3ReactContext.deactivate();
+    }
+    clearLastActiveAccount();
+    setConnector(null);
+    setError(null);
+    setStatus('disconnected');
+  }, [web3ReactContext]);
+  // if the user switched networks on the wallet itself
+  // return unsupported error.
+  React.useMemo(function () {
+    if (web3Error instanceof core.UnsupportedChainIdError) {
+      setStatus('error');
+      setError(new ChainUnsupportedError(web3Error.message));
+    }
+  }, [web3Error]);
+  var connect = React.useCallback( /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(connectorId) {
+      var id, _ref3, connectorInit, connectorConfig, connector, web3ReactConnector, _account, handledError;
+      return _regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            if (connectorId === void 0) {
+              connectorId = 'injected';
+            }
+            // Prevent race conditions between connections by using an external ID.
+            id = ++activationId.current;
+            reset();
+            // Check if another connection has happened right after deactivate().
+            if (!(id !== activationId.current)) {
+              _context.next = 5;
+              break;
+            }
+            return _context.abrupt("return");
+          case 5:
+            if (connectors[connectorId]) {
+              _context.next = 9;
+              break;
+            }
+            setStatus('error');
+            setError(new ConnectorUnsupportedError(connectorId));
+            return _context.abrupt("return");
+          case 9:
+            // If no connection happens, we're in the right context and can safely update
+            // the connection stage status
+            setStatus('connecting');
+            _ref3 = connectors[connectorId] || [], connectorInit = _ref3[0], connectorConfig = _ref3[1]; // Initialize the (useWallet) connector if it exists.
+            _context.next = 13;
+            return connectorInit == null ? void 0 : connectorInit();
+          case 13:
+            connector = _context.sent;
+            // Initialize the web3-react connector if it exists.
+            web3ReactConnector = connector == null ? void 0 : connector.web3ReactConnector == null ? void 0 : connector.web3ReactConnector(_extends({}, connectorConfig || {}));
+            if (web3ReactConnector) {
+              _context.next = 19;
+              break;
+            }
+            setStatus('error');
+            setError(new ConnectorUnsupportedError(connectorId));
+            return _context.abrupt("return");
+          case 19:
+            _context.prev = 19;
+            // TODO: there is no way to prevent an activation to complete, but we
+            // could reconnect to the last provider the user tried to connect to.
+            setConnector(connectorId);
+            _context.next = 23;
+            return web3ReactContext.activate(web3ReactConnector, undefined, true);
+          case 23:
+            setLastConnector(connectorId);
+            if (!(connectorId === 'injected')) {
+              _context.next = 30;
+              break;
+            }
+            _context.next = 27;
+            return web3ReactConnector.getAccount();
+          case 27:
+            _account = _context.sent;
+            _account && setLastActiveAccount(_account);
+            web3ReactConnector.getProvider().then(function (provider) {
+              provider.on('accountsChanged', function (accounts) {
+                setLastActiveAccount(accounts[0]);
+              });
+            });
+          case 30:
+            setStatus('connected');
+            _context.next = 48;
+            break;
+          case 33:
+            _context.prev = 33;
+            _context.t0 = _context["catch"](19);
+            if (!(id !== activationId.current)) {
+              _context.next = 37;
+              break;
+            }
+            return _context.abrupt("return");
+          case 37:
+            // If not, the error has been thrown during the current connection attempt,
+            // so it's correct to indicate that there has been an error
+            setConnector(null);
+            setStatus('error');
+            if (!(_context.t0 instanceof core.UnsupportedChainIdError)) {
+              _context.next = 42;
+              break;
+            }
+            setError(new ChainUnsupportedError(_context.t0.message));
+            return _context.abrupt("return");
+          case 42:
+            if (!connector.handleActivationError) {
+              _context.next = 47;
+              break;
+            }
+            handledError = connector.handleActivationError(_context.t0);
+            if (!handledError) {
+              _context.next = 47;
+              break;
+            }
+            setError(handledError);
+            return _context.abrupt("return");
+          case 47:
+            // Otherwise, set to state the received error
+            setError(_context.t0);
+          case 48:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee, null, [[19, 33]]);
+    }));
+    return function (_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }(), [connectors, reset, web3ReactContext]);
+  React.useEffect(function () {
+    if (!autoConnect) {
+      return;
+    }
+    var lastConnector = getLastConnector();
+    var lastActiveAccount = getLastActiveAccount();
+    if (lastActiveAccount && lastConnector === 'injected') {
+      var isInjectedAvailable = Object.keys(connectors).some(function (key) {
+        return key === 'injected';
+      });
+      if (isInjectedAvailable) {
+        connect();
+      }
+    }
+    //eslint-disable-next-line
+  }, []);
+  React.useEffect(function () {
+    if (!account || !ethereum) {
+      return;
+    }
+    var cancel = false;
+    setType(null);
+    getAccountIsContract(ethereum, account).then(function (isContract) {
+      if (!cancel) {
+        setStatus('connected');
+        setType(isContract ? 'contract' : 'normal');
+      }
+    });
+    return function () {
+      cancel = true;
+      setStatus('disconnected');
+      setType(null);
+    };
+  }, [account, ethereum]);
+  var wallet = React.useMemo(function () {
+    return {
+      _web3ReactContext: web3ReactContext,
+      account: account || null,
+      balance: balance,
+      chainId: chainId,
+      connect: connect,
+      connector: connector,
+      connectors: connectors,
+      error: error,
+      ethereum: ethereum,
+      isConnected: function isConnected() {
+        return status === 'connected';
+      },
+      networkName: getChainInformation(chainId).type,
+      providerInfo: connector ? getProviderFromUseWalletId(connector) : getProviderFromUseWalletId('unknown'),
+      reset: reset,
+      status: status,
+      type: type
+    };
+  }, [account, balance, chainId, connect, connector, connectors, error, ethereum, type, reset, status, web3ReactContext]);
+  return React.createElement(UseWalletContext.Provider, {
+    value: {
+      addBlockNumberListener: addBlockNumberListener,
+      pollBalanceInterval: pollBalanceInterval,
+      pollBlockNumberInterval: pollBlockNumberInterval,
+      removeBlockNumberListener: removeBlockNumberListener,
+      wallet: wallet
+    }
+  }, children);
+}
+UseWalletProviderWrapper.propTypes = UseWalletProvider.propTypes;
+UseWalletProviderWrapper.defaultProps = UseWalletProvider.defaultProps;
+function UseWalletProviderWrapper(props) {
+  return React.createElement(core.Web3ReactProvider, {
+    getLibrary: function getLibrary(ethereum) {
+      return ethereum;
+    }
+  }, React.createElement(UseWalletProvider, Object.assign({}, props)));
+}
+
+exports.ChainUnsupportedError = ChainUnsupportedError;
+exports.ConnectionRejectedError = ConnectionRejectedError;
+exports.ConnectorUnsupportedError = ConnectorUnsupportedError;
+exports.UseWalletProvider = UseWalletProviderWrapper;
+exports.blockExplorerUrl = blockExplorerUrl;
+exports.chains = chains;
+exports.getLastActiveAccount = getLastActiveAccount;
+exports.getProviderFromUseWalletId = getProviderFromUseWalletId;
+exports.getProviderString = getProviderString;
+exports.useWallet = useWallet;
 //# sourceMappingURL=index.js.map

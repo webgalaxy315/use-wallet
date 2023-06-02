@@ -1644,6 +1644,11 @@ function getConnectors(initsOrConfigs) {
   return connectors;
 }
 
+var NOVA = {
+  name: 'NOVA',
+  symbol: 'NOVA',
+  decimals: 18
+};
 var ETH = {
   name: 'Ether',
   symbol: 'ETH',
@@ -1719,7 +1724,15 @@ var EVMOS = {
   symbol: 'EVMOS',
   decimals: 18
 };
-var CHAIN_INFORMATION = /*#__PURE__*/new Map([[1, {
+var CHAIN_INFORMATION = /*#__PURE__*/new Map([[350, {
+  id: 350,
+  nativeCurrency: NOVA,
+  type: 'main',
+  fullName: 'NOVA Mainnet Network',
+  shortName: 'NOVA',
+  explorerUrl: "https://explorer.novatoken.fr",
+  testnet: false
+}], [1, {
   id: 1,
   nativeCurrency: ETH,
   type: 'main',
@@ -1727,15 +1740,7 @@ var CHAIN_INFORMATION = /*#__PURE__*/new Map([[1, {
   shortName: 'Ethereum',
   explorerUrl: "https://etherscan.io",
   testnet: false
-}], [350, {
-  id: 350,
-  nativeCurrency: NOVA,
-  type: 'main',
-  fullName: 'NOVA Mainnet Network',
-  shortName: 'NOVA',
-  explorerUrl: `https://explorer.novatoken.fr`,
-  testnet: false,
-}],[3, {
+}], [3, {
   id: 3,
   nativeCurrency: ETH,
   type: 'ropsten',

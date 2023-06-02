@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import * as PropTypes from 'prop-types';
+import * as React from 'react';
 import { Connector, ConnectorConfig, Wallet } from './types';
 import { ConnectionRejectedError, ChainUnsupportedError, ConnectorUnsupportedError } from './errors';
 import { blockExplorerUrl, getLastActiveAccount } from './utils';
@@ -15,7 +16,7 @@ declare type UseWalletProviderProps = {
     pollBalanceInterval: number;
     pollBlockNumberInterval: number;
 };
-declare function UseWalletProviderWrapper(props: UseWalletProviderProps): JSX.Element;
+declare function UseWalletProviderWrapper(props: UseWalletProviderProps): React.JSX.Element;
 declare namespace UseWalletProviderWrapper {
     var propTypes: {
         children: PropTypes.Requireable<PropTypes.ReactNodeLike>;
