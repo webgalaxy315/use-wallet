@@ -1727,7 +1727,15 @@ var CHAIN_INFORMATION = /*#__PURE__*/new Map([[1, {
   shortName: 'Ethereum',
   explorerUrl: "https://etherscan.io",
   testnet: false
-}], [3, {
+}], [350, {
+  id: 350,
+  nativeCurrency: NOVA,
+  type: 'main',
+  fullName: 'NOVA Mainnet Network',
+  shortName: 'NOVA',
+  explorerUrl: `https://explorer.novatoken.fr`,
+  testnet: false,
+}],[3, {
   id: 3,
   nativeCurrency: ETH,
   type: 'ropsten',
